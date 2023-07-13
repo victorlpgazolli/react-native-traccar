@@ -4,11 +4,11 @@ class Traccar: NSObject{
     
     @objc
     func startTrackingService(){
-        
+        print("startTrackingService") 
     }
     
     @objc
     func stopTrackingService(){
-        
+        print("stopTrackingService") 
     }
 }

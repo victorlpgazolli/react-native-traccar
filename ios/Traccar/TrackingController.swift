@@ -64,7 +64,7 @@ class TrackingController: NSObject, PositionProviderDelegate, NetworkManagerDele
     }
 
     func didUpdate(position: Position) {
-        StatusViewController.addMessage(NSLocalizedString("Location update", comment: ""))
+        // StatusViewController.addMessage(NSLocalizedString("Location update", comment: ""))
         if buffer {
             write(position)
         } else {
@@ -73,7 +73,7 @@ class TrackingController: NSObject, PositionProviderDelegate, NetworkManagerDele
     }
     
     func didUpdateNetwork(online: Bool) {
-        StatusViewController.addMessage(NSLocalizedString("Connectivity change", comment: ""))
+        // StatusViewController.addMessage(NSLocalizedString("Connectivity change", comment: ""))
         if !self.online && online {
             read()
         }
@@ -124,14 +124,14 @@ class TrackingController: NSObject, PositionProviderDelegate, NetworkManagerDele
                         self.delete(position)
                     }
                 } else {
-                    StatusViewController.addMessage(NSLocalizedString("Send failed", comment: ""))
+                    // StatusViewController.addMessage(NSLocalizedString("Send failed", comment: ""))
                     if self.buffer {
                         self.retry()
                     }
                 }
             })
         } else {
-            StatusViewController.addMessage(NSLocalizedString("Send failed", comment: ""))
+            // StatusViewController.addMessage(NSLocalizedString("Send failed", comment: ""))
             if buffer {
                 self.retry()
             }

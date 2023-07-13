@@ -1,25 +1,26 @@
 import * as React from 'react';
 
-import { StyleSheet, View, NativeModules, TouchableOpacity, Text, PermissionsAndroid } from 'react-native';
+import { StyleSheet, View, NativeModules, TouchableOpacity, Text, PermissionsAndroid, Platform } from 'react-native';
 import Traccar from 'react-native-traccar';
-
+import { request, PERMISSIONS, RESULTS } from 'react-native-permissions';
 export default function App() {
 
 
-  const startTrackingService = () => {
-    PermissionsAndroid.request(
-      PermissionsAndroid.PERMISSIONS.ACCESS_FINE_LOCATION,
+  const startTrackingService = async () => {
+    const granted = await request(
+      Platform.select({
+        android: PERMISSIONS.ANDROID.ACCESS_COARSE_LOCATION,
+        ios: PERMISSIONS.IOS.LOCATION_WHEN_IN_USE,
+      }),
       {
-        title: 'Location Access Required',
-        message: 'This App needs to Access your location',
+        title: 'DemoApp',
+        message: 'DemoApp would like access to your location ',
       },
-    ).then(granted => {
-      if (granted === PermissionsAndroid.RESULTS.GRANTED) {
-        NativeModules?.Traccar.startTrackingService()
-      } else {
-        alert('Location permission denied');
-      }
-    });
+    );
+
+    if (granted === RESULTS.GRANTED) return NativeModules?.Traccar.startTrackingService();
+    alert('Location permission denied');
+
   }
   const stopTrackingService = () => {
     NativeModules?.Traccar.stopTrackingService()

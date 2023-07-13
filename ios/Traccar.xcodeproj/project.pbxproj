@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		2767329B2A60AB14006EDA2A /* Traccar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 276732992A60AB14006EDA2A /* Traccar.swift */; };
 		2767329C2A60AB14006EDA2A /* Traccar.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2767329A2A60AB14006EDA2A /* Traccar.mm */; };
+		277E9B962A60B4DB003F6B28 /* TraccarClient.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 277E9B942A60B4DB003F6B28 /* TraccarClient.xcdatamodeld */; };
+		4A8B4525D81C54B60123887F /* Pods_TraccarTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52BC2724C6D2E6E60D464203 /* Pods_TraccarTests.framework */; };
 		5E394EBE28A9CC7600396F33 /* BatteryStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E394EBD28A9CC7600396F33 /* BatteryStatus.swift */; };
 		5E716A271F63A0B100A2DBC3 /* DistanceCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E716A261F63A0B100A2DBC3 /* DistanceCalculator.swift */; };
 		5E716A291F63A45A00A2DBC3 /* RequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E716A281F63A45A00A2DBC3 /* RequestManager.swift */; };
@@ -16,17 +18,15 @@
 		5EE3CA342998948F002C86E4 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 5EE3CA332998948F002C86E4 /* FirebaseAnalytics */; };
 		5EE3CA362998948F002C86E4 /* FirebaseCrashlytics in Frameworks */ = {isa = PBXBuildFile; productRef = 5EE3CA352998948F002C86E4 /* FirebaseCrashlytics */; };
 		5EE3CA39299894B9002C86E4 /* InAppSettingsKit in Frameworks */ = {isa = PBXBuildFile; productRef = 5EE3CA38299894B9002C86E4 /* InAppSettingsKit */; };
-		6413CBE9A45AA4D507172978 /* Pods_TraccarClientTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C53F15E7D8FDA05531F24F1 /* Pods_TraccarClientTests.framework */; };
+		AD59CCA7A6EFDA9B6F834D74 /* Pods_Traccar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55F53213CE529C7225D73355 /* Pods_Traccar.framework */; };
 		CB4197931F674A3E008F301C /* DatabaseHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB4197921F674A3E008F301C /* DatabaseHelper.swift */; };
 		CB4197991F67724F008F301C /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB4197981F67724F008F301C /* NetworkManager.swift */; };
 		CB7ED0801F6602CD00A33FCF /* Position.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB7ED07F1F6602CD00A33FCF /* Position.swift */; };
 		CB7ED0821F661B4F00A33FCF /* PositionProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB7ED0811F661B4F00A33FCF /* PositionProvider.swift */; };
 		CB7ED0841F662BAF00A33FCF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB7ED0831F662BAF00A33FCF /* AppDelegate.swift */; };
-		CBAA0F7D1F68E14C008BBBBE /* StatusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBAA0F7C1F68E14C008BBBBE /* StatusViewController.swift */; };
-		CBAA0F7F1F68E807008BBBBE /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBAA0F7E1F68E807008BBBBE /* MainViewController.swift */; };
 		CBAA0F811F68EB62008BBBBE /* TrackingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBAA0F801F68EB62008BBBBE /* TrackingController.swift */; };
 		CBCE82EF1B8D253600A7318B /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBCE82EE1B8D253600A7318B /* CoreData.framework */; };
-		CBCE82F21B8D265800A7318B /* TraccarClient.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CBCE82F01B8D265800A7318B /* TraccarClient.xcdatamodeld */; };
+		CBCE82F21B8D265800A7318B /* Traccar.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CBCE82F01B8D265800A7318B /* Traccar.xcdatamodeld */; };
 		CBDEEB8A1B8EB6A4006BC126 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBDEEB891B8EB6A4006BC126 /* SystemConfiguration.framework */; };
 		CE5899C81B115C9100ED70D2 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE5899C71B115C9100ED70D2 /* Images.xcassets */; };
 		CED4871C17DB1BF6007FCF57 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CED4871B17DB1BF6007FCF57 /* UIKit.framework */; };
@@ -35,10 +35,8 @@
 		CED4879917DB1DF4007FCF57 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CED4879817DB1DF4007FCF57 /* MessageUI.framework */; };
 		CED4879B17DB1E61007FCF57 /* InAppSettings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = CED4879A17DB1E61007FCF57 /* InAppSettings.bundle */; };
 		CEDB048717ED50C1000E7EDF /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEDB048617ED50C1000E7EDF /* CoreLocation.framework */; };
-		CEF643271B919FFA00195CEA /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEF643241B919FFA00195CEA /* LaunchScreen.xib */; };
 		CEF6433C1B91AA9400195CEA /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CED4873317DB1BF6007FCF57 /* MainStoryboard.storyboard */; };
 		CEF6433D1B91AA9400195CEA /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = CEF643371B91A94600195CEA /* Localizable.strings */; };
-		D3D0CB4C4E482DE1EF11F2ED /* Pods_TraccarClient.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBD934E9843AB5CFDC8DF4A5 /* Pods_TraccarClient.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,7 +45,7 @@
 			containerPortal = CED4871017DB1BF6007FCF57 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = CED4871717DB1BF6007FCF57;
-			remoteInfo = TraccarClient;
+			remoteInfo = Traccar;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -68,27 +66,26 @@
 		276732982A60AB14006EDA2A /* Traccar-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Traccar-Bridging-Header.h"; sourceTree = "<group>"; };
 		276732992A60AB14006EDA2A /* Traccar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Traccar.swift; sourceTree = "<group>"; };
 		2767329A2A60AB14006EDA2A /* Traccar.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Traccar.mm; sourceTree = "<group>"; };
-		4C3194FDD9E4FCFD01503197 /* Pods-TraccarClientTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TraccarClientTests.debug.xcconfig"; path = "Target Support Files/Pods-TraccarClientTests/Pods-TraccarClientTests.debug.xcconfig"; sourceTree = "<group>"; };
-		5C66AFDC1E83BBCC7E6D8A83 /* Pods-TraccarClientTests.google.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TraccarClientTests.google.xcconfig"; path = "Target Support Files/Pods-TraccarClientTests/Pods-TraccarClientTests.google.xcconfig"; sourceTree = "<group>"; };
+		277E9B952A60B4DB003F6B28 /* TraccarClient.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TraccarClient.xcdatamodel; sourceTree = "<group>"; };
+		4DF7D96FDB3FF3978913A190 /* Pods-Traccar.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Traccar.release.xcconfig"; path = "Target Support Files/Pods-Traccar/Pods-Traccar.release.xcconfig"; sourceTree = "<group>"; };
+		52BC2724C6D2E6E60D464203 /* Pods_TraccarTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TraccarTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		55F53213CE529C7225D73355 /* Pods_Traccar.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Traccar.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E394EBD28A9CC7600396F33 /* BatteryStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BatteryStatus.swift; sourceTree = "<group>"; };
 		5E716A261F63A0B100A2DBC3 /* DistanceCalculator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DistanceCalculator.swift; sourceTree = "<group>"; };
 		5E716A281F63A45A00A2DBC3 /* RequestManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestManager.swift; sourceTree = "<group>"; };
 		5E716A2A1F63A60800A2DBC3 /* ProtocolFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProtocolFormatter.swift; sourceTree = "<group>"; };
-		6C53F15E7D8FDA05531F24F1 /* Pods_TraccarClientTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TraccarClientTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		81AC353AE5F096BE743EDB61 /* Pods-TraccarClient.google.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TraccarClient.google.xcconfig"; path = "Target Support Files/Pods-TraccarClient/Pods-TraccarClient.google.xcconfig"; sourceTree = "<group>"; };
-		9B6B6990BE3774CFE5CE3A6F /* Pods-TraccarClient.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TraccarClient.debug.xcconfig"; path = "Target Support Files/Pods-TraccarClient/Pods-TraccarClient.debug.xcconfig"; sourceTree = "<group>"; };
-		B03FE537774EB780548721DA /* Pods-TraccarClient.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TraccarClient.release.xcconfig"; path = "Target Support Files/Pods-TraccarClient/Pods-TraccarClient.release.xcconfig"; sourceTree = "<group>"; };
-		C90EDD4B96782335DF134ABF /* Pods-TraccarClientTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TraccarClientTests.release.xcconfig"; path = "Target Support Files/Pods-TraccarClientTests/Pods-TraccarClientTests.release.xcconfig"; sourceTree = "<group>"; };
+		96A94FAA1243B6338FAF48C4 /* Pods-Traccar.google.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Traccar.google.xcconfig"; path = "Target Support Files/Pods-Traccar/Pods-Traccar.google.xcconfig"; sourceTree = "<group>"; };
+		97E005167A511B2004DB2D6C /* Pods-TraccarTests.google.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TraccarTests.google.xcconfig"; path = "Target Support Files/Pods-TraccarTests/Pods-TraccarTests.google.xcconfig"; sourceTree = "<group>"; };
+		B4A6A731FC514C1A5CC75F88 /* Pods-Traccar.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Traccar.debug.xcconfig"; path = "Target Support Files/Pods-Traccar/Pods-Traccar.debug.xcconfig"; sourceTree = "<group>"; };
+		BBD2B88928B29CC4D61A4F16 /* Pods-TraccarTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TraccarTests.release.xcconfig"; path = "Target Support Files/Pods-TraccarTests/Pods-TraccarTests.release.xcconfig"; sourceTree = "<group>"; };
 		CB4197921F674A3E008F301C /* DatabaseHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatabaseHelper.swift; sourceTree = "<group>"; };
 		CB4197981F67724F008F301C /* NetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		CB7ED07F1F6602CD00A33FCF /* Position.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Position.swift; sourceTree = "<group>"; };
 		CB7ED0811F661B4F00A33FCF /* PositionProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PositionProvider.swift; sourceTree = "<group>"; };
 		CB7ED0831F662BAF00A33FCF /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		CBAA0F7C1F68E14C008BBBBE /* StatusViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatusViewController.swift; sourceTree = "<group>"; };
-		CBAA0F7E1F68E807008BBBBE /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		CBAA0F801F68EB62008BBBBE /* TrackingController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrackingController.swift; sourceTree = "<group>"; };
 		CBCE82EE1B8D253600A7318B /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
-		CBCE82F11B8D265800A7318B /* TraccarClient.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TraccarClient.xcdatamodel; sourceTree = "<group>"; };
+		CBCE82F11B8D265800A7318B /* Traccar.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Traccar.xcdatamodel; sourceTree = "<group>"; };
 		CBDEEB891B8EB6A4006BC126 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		CE2FA5181CB935C9007F86B4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/MainStoryboard.strings; sourceTree = "<group>"; };
 		CE4B80FE1EC71CAE00D1C41D /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/MainStoryboard.strings"; sourceTree = "<group>"; };
@@ -106,22 +103,21 @@
 		CE4B810A1EC71D4800D1C41D /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/MainStoryboard.strings; sourceTree = "<group>"; };
 		CE4B810B1EC71D4800D1C41D /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
 		CE5899C71B115C9100ED70D2 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		CED4871817DB1BF6007FCF57 /* TraccarClient.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TraccarClient.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CED4871817DB1BF6007FCF57 /* Traccar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Traccar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CED4871B17DB1BF6007FCF57 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		CED4871D17DB1BF6007FCF57 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		CED4871F17DB1BF6007FCF57 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		CED4872317DB1BF6007FCF57 /* TraccarClient-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TraccarClient-Info.plist"; sourceTree = "<group>"; };
-		CED4872917DB1BF6007FCF57 /* TraccarClient-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TraccarClient-Prefix.pch"; sourceTree = "<group>"; };
+		CED4872317DB1BF6007FCF57 /* Traccar-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Traccar-Info.plist"; sourceTree = "<group>"; };
+		CED4872917DB1BF6007FCF57 /* Traccar-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Traccar-Prefix.pch"; sourceTree = "<group>"; };
 		CED4879817DB1DF4007FCF57 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		CED4879A17DB1E61007FCF57 /* InAppSettings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = InAppSettings.bundle; sourceTree = "<group>"; };
 		CEDB048617ED50C1000E7EDF /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
-		CEE286CE1B80839700AE7E83 /* TraccarClientTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TraccarClientTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CEE286CE1B80839700AE7E83 /* TraccarTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TraccarTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEECE4B91B91AE2B00EB6F4A /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
 		CEECE4BA1B91AE2C00EB6F4A /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
 		CEECE4BB1B91AE2D00EB6F4A /* pt */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pt; path = pt.lproj/Localizable.strings; sourceTree = "<group>"; };
 		CEF254DD1B905266001DEFD2 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/MainStoryboard.strings; sourceTree = "<group>"; };
 		CEF254DF1B9052EB001DEFD2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
-		CEF643241B919FFA00195CEA /* LaunchScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LaunchScreen.xib; sourceTree = "<group>"; };
 		CEF6432A1B91A48B00195CEA /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/MainStoryboard.strings; sourceTree = "<group>"; };
 		CEF6432C1B91A49400195CEA /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/MainStoryboard.strings; sourceTree = "<group>"; };
 		CEF6432E1B91A49700195CEA /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/MainStoryboard.strings; sourceTree = "<group>"; };
@@ -129,7 +125,7 @@
 		CEF643361B91A94600195CEA /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
 		CEF643381B91A95700195CEA /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
 		CEF643391B91A98300195CEA /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
-		DBD934E9843AB5CFDC8DF4A5 /* Pods_TraccarClient.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TraccarClient.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D799473180611F7E94682325 /* Pods-TraccarTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TraccarTests.debug.xcconfig"; path = "Target Support Files/Pods-TraccarTests/Pods-TraccarTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -147,7 +143,7 @@
 				5EE3CA39299894B9002C86E4 /* InAppSettingsKit in Frameworks */,
 				CED4871E17DB1BF6007FCF57 /* Foundation.framework in Frameworks */,
 				CED4872017DB1BF6007FCF57 /* CoreGraphics.framework in Frameworks */,
-				D3D0CB4C4E482DE1EF11F2ED /* Pods_TraccarClient.framework in Frameworks */,
+				AD59CCA7A6EFDA9B6F834D74 /* Pods_Traccar.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -155,7 +151,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6413CBE9A45AA4D507172978 /* Pods_TraccarClientTests.framework in Frameworks */,
+				4A8B4525D81C54B60123887F /* Pods_TraccarTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -165,12 +161,12 @@
 		365CE99BC81E88EE699AF8E6 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				9B6B6990BE3774CFE5CE3A6F /* Pods-TraccarClient.debug.xcconfig */,
-				B03FE537774EB780548721DA /* Pods-TraccarClient.release.xcconfig */,
-				81AC353AE5F096BE743EDB61 /* Pods-TraccarClient.google.xcconfig */,
-				4C3194FDD9E4FCFD01503197 /* Pods-TraccarClientTests.debug.xcconfig */,
-				C90EDD4B96782335DF134ABF /* Pods-TraccarClientTests.release.xcconfig */,
-				5C66AFDC1E83BBCC7E6D8A83 /* Pods-TraccarClientTests.google.xcconfig */,
+				B4A6A731FC514C1A5CC75F88 /* Pods-Traccar.debug.xcconfig */,
+				4DF7D96FDB3FF3978913A190 /* Pods-Traccar.release.xcconfig */,
+				96A94FAA1243B6338FAF48C4 /* Pods-Traccar.google.xcconfig */,
+				D799473180611F7E94682325 /* Pods-TraccarTests.debug.xcconfig */,
+				BBD2B88928B29CC4D61A4F16 /* Pods-TraccarTests.release.xcconfig */,
+				97E005167A511B2004DB2D6C /* Pods-TraccarTests.google.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -178,6 +174,7 @@
 		CED4870F17DB1BF6007FCF57 = {
 			isa = PBXGroup;
 			children = (
+				277E9B942A60B4DB003F6B28 /* TraccarClient.xcdatamodeld */,
 				CED4872117DB1BF6007FCF57 /* Traccar */,
 				CED4871A17DB1BF6007FCF57 /* Frameworks */,
 				CED4871917DB1BF6007FCF57 /* Products */,
@@ -188,8 +185,8 @@
 		CED4871917DB1BF6007FCF57 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				CED4871817DB1BF6007FCF57 /* TraccarClient.app */,
-				CEE286CE1B80839700AE7E83 /* TraccarClientTests.xctest */,
+				CED4871817DB1BF6007FCF57 /* Traccar.app */,
+				CEE286CE1B80839700AE7E83 /* TraccarTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -204,8 +201,8 @@
 				CED4871B17DB1BF6007FCF57 /* UIKit.framework */,
 				CED4871D17DB1BF6007FCF57 /* Foundation.framework */,
 				CED4871F17DB1BF6007FCF57 /* CoreGraphics.framework */,
-				DBD934E9843AB5CFDC8DF4A5 /* Pods_TraccarClient.framework */,
-				6C53F15E7D8FDA05531F24F1 /* Pods_TraccarClientTests.framework */,
+				55F53213CE529C7225D73355 /* Pods_Traccar.framework */,
+				52BC2724C6D2E6E60D464203 /* Pods_TraccarTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -218,20 +215,17 @@
 				276732992A60AB14006EDA2A /* Traccar.swift */,
 				CE5899C71B115C9100ED70D2 /* Images.xcassets */,
 				CED4873317DB1BF6007FCF57 /* MainStoryboard.storyboard */,
-				CEF643241B919FFA00195CEA /* LaunchScreen.xib */,
 				CEF643371B91A94600195CEA /* Localizable.strings */,
 				CED4872217DB1BF6007FCF57 /* Supporting Files */,
 				CB7ED0831F662BAF00A33FCF /* AppDelegate.swift */,
 				CB4197921F674A3E008F301C /* DatabaseHelper.swift */,
 				5E716A261F63A0B100A2DBC3 /* DistanceCalculator.swift */,
-				CBAA0F7E1F68E807008BBBBE /* MainViewController.swift */,
 				CB4197981F67724F008F301C /* NetworkManager.swift */,
 				CB7ED07F1F6602CD00A33FCF /* Position.swift */,
 				5E394EBD28A9CC7600396F33 /* BatteryStatus.swift */,
 				CB7ED0811F661B4F00A33FCF /* PositionProvider.swift */,
 				5E716A2A1F63A60800A2DBC3 /* ProtocolFormatter.swift */,
 				5E716A281F63A45A00A2DBC3 /* RequestManager.swift */,
-				CBAA0F7C1F68E14C008BBBBE /* StatusViewController.swift */,
 				CBAA0F801F68EB62008BBBBE /* TrackingController.swift */,
 			);
 			path = Traccar;
@@ -240,9 +234,9 @@
 		CED4872217DB1BF6007FCF57 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				CED4872317DB1BF6007FCF57 /* TraccarClient-Info.plist */,
-				CED4872917DB1BF6007FCF57 /* TraccarClient-Prefix.pch */,
-				CBCE82F01B8D265800A7318B /* TraccarClient.xcdatamodeld */,
+				CED4872317DB1BF6007FCF57 /* Traccar-Info.plist */,
+				CED4872917DB1BF6007FCF57 /* Traccar-Prefix.pch */,
+				CBCE82F01B8D265800A7318B /* Traccar.xcdatamodeld */,
 				CED4879A17DB1E61007FCF57 /* InAppSettings.bundle */,
 			);
 			name = "Supporting Files";
@@ -251,37 +245,37 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		CED4871717DB1BF6007FCF57 /* TraccarClient */ = {
+		CED4871717DB1BF6007FCF57 /* Traccar */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = CED4873E17DB1BF6007FCF57 /* Build configuration list for PBXNativeTarget "TraccarClient" */;
+			buildConfigurationList = CED4873E17DB1BF6007FCF57 /* Build configuration list for PBXNativeTarget "Traccar" */;
 			buildPhases = (
-				336312383EBA2CE76A62BF07 /* [CP] Check Pods Manifest.lock */,
+				8AA208FA1A31266D34E0BFEC /* [CP] Check Pods Manifest.lock */,
 				CED4871417DB1BF6007FCF57 /* Sources */,
 				CED4871517DB1BF6007FCF57 /* Frameworks */,
 				CED4871617DB1BF6007FCF57 /* Resources */,
 				5E3175221F692FA600CDF0F5 /* ShellScript */,
 				CEFA94EF1EA2EE31009B5809 /* Embed Frameworks */,
-				CE53D381166346161DE11133 /* [CP] Embed Pods Frameworks */,
+				FAFED7E64EED9BE37346A13D /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = TraccarClient;
+			name = Traccar;
 			packageProductDependencies = (
 				5EE3CA332998948F002C86E4 /* FirebaseAnalytics */,
 				5EE3CA352998948F002C86E4 /* FirebaseCrashlytics */,
 				5EE3CA38299894B9002C86E4 /* InAppSettingsKit */,
 			);
-			productName = TraccarClient;
-			productReference = CED4871817DB1BF6007FCF57 /* TraccarClient.app */;
+			productName = Traccar;
+			productReference = CED4871817DB1BF6007FCF57 /* Traccar.app */;
 			productType = "com.apple.product-type.application";
 		};
-		CEE286CD1B80839600AE7E83 /* TraccarClientTests */ = {
+		CEE286CD1B80839600AE7E83 /* TraccarTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = CEE286D61B80839700AE7E83 /* Build configuration list for PBXNativeTarget "TraccarClientTests" */;
+			buildConfigurationList = CEE286D61B80839700AE7E83 /* Build configuration list for PBXNativeTarget "TraccarTests" */;
 			buildPhases = (
-				77A6686AA319ECBE6BFAE791 /* [CP] Check Pods Manifest.lock */,
+				57F43AE1CE69BD8E34F0F6F8 /* [CP] Check Pods Manifest.lock */,
 				CEE286CA1B80839600AE7E83 /* Sources */,
 				CEE286CB1B80839600AE7E83 /* Frameworks */,
 				CEE286CC1B80839600AE7E83 /* Resources */,
@@ -291,9 +285,9 @@
 			dependencies = (
 				CEE286D51B80839700AE7E83 /* PBXTargetDependency */,
 			);
-			name = TraccarClientTests;
-			productName = TraccarClientTests;
-			productReference = CEE286CE1B80839700AE7E83 /* TraccarClientTests.xctest */;
+			name = TraccarTests;
+			productName = TraccarTests;
+			productReference = CEE286CE1B80839700AE7E83 /* TraccarTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -345,8 +339,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				CED4871717DB1BF6007FCF57 /* TraccarClient */,
-				CEE286CD1B80839600AE7E83 /* TraccarClientTests */,
+				CED4871717DB1BF6007FCF57 /* Traccar */,
+				CEE286CD1B80839600AE7E83 /* TraccarTests */,
 			);
 		};
 /* End PBXProject section */
@@ -359,7 +353,6 @@
 				CEF6433C1B91AA9400195CEA /* MainStoryboard.storyboard in Resources */,
 				CEF6433D1B91AA9400195CEA /* Localizable.strings in Resources */,
 				CE5899C81B115C9100ED70D2 /* Images.xcassets in Resources */,
-				CEF643271B919FFA00195CEA /* LaunchScreen.xib in Resources */,
 				CED4879B17DB1E61007FCF57 /* InAppSettings.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -374,7 +367,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		336312383EBA2CE76A62BF07 /* [CP] Check Pods Manifest.lock */ = {
+		57F43AE1CE69BD8E34F0F6F8 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -389,7 +382,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-TraccarClient-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-TraccarTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -411,7 +404,7 @@
 			shellPath = /bin/sh;
 			shellScript = "if [ \"${CONFIGURATION}\" = \"Google\" ]; then\ncp -r \"${PROJECT_DIR}/../environment/google-services/traccar-client-ios.plist\" \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.app/GoogleService-Info.plist\"\n\"${BUILD_DIR%/Build/*}/SourcePackages/checkouts/firebase-ios-sdk/Crashlytics/run\"\nfi\n";
 		};
-		77A6686AA319ECBE6BFAE791 /* [CP] Check Pods Manifest.lock */ = {
+		8AA208FA1A31266D34E0BFEC /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -426,20 +419,20 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-TraccarClientTests-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-Traccar-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		CE53D381166346161DE11133 /* [CP] Embed Pods Frameworks */ = {
+		FAFED7E64EED9BE37346A13D /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-TraccarClient/Pods-TraccarClient-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-Traccar/Pods-Traccar-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/DoubleConversion/DoubleConversion.framework",
 				"${BUILT_PRODUCTS_DIR}/RCT-Folly/folly.framework",
 				"${BUILT_PRODUCTS_DIR}/RCTTypeSafety/RCTTypeSafety.framework",
@@ -512,7 +505,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TraccarClient/Pods-TraccarClient-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Traccar/Pods-Traccar-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -523,15 +516,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				CB7ED0801F6602CD00A33FCF /* Position.swift in Sources */,
-				CBAA0F7F1F68E807008BBBBE /* MainViewController.swift in Sources */,
 				CB7ED0821F661B4F00A33FCF /* PositionProvider.swift in Sources */,
 				CB4197991F67724F008F301C /* NetworkManager.swift in Sources */,
+				277E9B962A60B4DB003F6B28 /* TraccarClient.xcdatamodeld in Sources */,
 				CB7ED0841F662BAF00A33FCF /* AppDelegate.swift in Sources */,
 				5E394EBE28A9CC7600396F33 /* BatteryStatus.swift in Sources */,
 				2767329B2A60AB14006EDA2A /* Traccar.swift in Sources */,
 				5E716A2B1F63A60800A2DBC3 /* ProtocolFormatter.swift in Sources */,
-				CBCE82F21B8D265800A7318B /* TraccarClient.xcdatamodeld in Sources */,
-				CBAA0F7D1F68E14C008BBBBE /* StatusViewController.swift in Sources */,
+				CBCE82F21B8D265800A7318B /* Traccar.xcdatamodeld in Sources */,
 				2767329C2A60AB14006EDA2A /* Traccar.mm in Sources */,
 				CBAA0F811F68EB62008BBBBE /* TrackingController.swift in Sources */,
 				5E716A271F63A0B100A2DBC3 /* DistanceCalculator.swift in Sources */,
@@ -552,7 +544,7 @@
 /* Begin PBXTargetDependency section */
 		CEE286D51B80839700AE7E83 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = CED4871717DB1BF6007FCF57 /* TraccarClient */;
+			target = CED4871717DB1BF6007FCF57 /* Traccar */;
 			targetProxy = CEE286D41B80839700AE7E83 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -652,7 +644,7 @@
 		};
 		5E3175241F69305200CDF0F5 /* Google */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 81AC353AE5F096BE743EDB61 /* Pods-TraccarClient.google.xcconfig */;
+			baseConfigurationReference = 96A94FAA1243B6338FAF48C4 /* Pods-Traccar.google.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -664,8 +656,8 @@
 				DEVELOPMENT_TEAM = YW49KTJKFW;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "TraccarClient/TraccarClient-Prefix.pch";
-				INFOPLIST_FILE = "TraccarClient/TraccarClient-Info.plist";
+				GCC_PREFIX_HEADER = "Traccar/Traccar-Prefix.pch";
+				INFOPLIST_FILE = "Traccar/Traccar-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -685,7 +677,7 @@
 		};
 		5E3175251F69305200CDF0F5 /* Google */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5C66AFDC1E83BBCC7E6D8A83 /* Pods-TraccarClientTests.google.xcconfig */;
+			baseConfigurationReference = 97E005167A511B2004DB2D6C /* Pods-TraccarTests.google.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -704,7 +696,7 @@
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
-				INFOPLIST_FILE = TraccarClientTests/Info.plist;
+				INFOPLIST_FILE = TraccarTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -717,7 +709,7 @@
 				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_SWIFT3_OBJC_INFERENCE = On;
 				SWIFT_VERSION = 5.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TraccarClient.app/TraccarClient";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Traccar.app/Traccar";
 			};
 			name = Google;
 		};
@@ -824,7 +816,7 @@
 		};
 		CED4873F17DB1BF6007FCF57 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9B6B6990BE3774CFE5CE3A6F /* Pods-TraccarClient.debug.xcconfig */;
+			baseConfigurationReference = B4A6A731FC514C1A5CC75F88 /* Pods-Traccar.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -835,8 +827,8 @@
 				DEVELOPMENT_TEAM = YW49KTJKFW;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "TraccarClient/TraccarClient-Prefix.pch";
-				INFOPLIST_FILE = "TraccarClient/TraccarClient-Info.plist";
+				GCC_PREFIX_HEADER = "Traccar/Traccar-Prefix.pch";
+				INFOPLIST_FILE = "Traccar/Traccar-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -856,7 +848,7 @@
 		};
 		CED4874017DB1BF6007FCF57 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B03FE537774EB780548721DA /* Pods-TraccarClient.release.xcconfig */;
+			baseConfigurationReference = 4DF7D96FDB3FF3978913A190 /* Pods-Traccar.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -868,8 +860,8 @@
 				DEVELOPMENT_TEAM = YW49KTJKFW;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "TraccarClient/TraccarClient-Prefix.pch";
-				INFOPLIST_FILE = "TraccarClient/TraccarClient-Info.plist";
+				GCC_PREFIX_HEADER = "Traccar/Traccar-Prefix.pch";
+				INFOPLIST_FILE = "Traccar/Traccar-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -888,7 +880,7 @@
 		};
 		CEE286D71B80839700AE7E83 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4C3194FDD9E4FCFD01503197 /* Pods-TraccarClientTests.debug.xcconfig */;
+			baseConfigurationReference = D799473180611F7E94682325 /* Pods-TraccarTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -909,7 +901,7 @@
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
-				INFOPLIST_FILE = TraccarClientTests/Info.plist;
+				INFOPLIST_FILE = TraccarTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -923,13 +915,13 @@
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_SWIFT3_OBJC_INFERENCE = On;
 				SWIFT_VERSION = 5.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TraccarClient.app/TraccarClient";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Traccar.app/Traccar";
 			};
 			name = Debug;
 		};
 		CEE286D81B80839700AE7E83 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C90EDD4B96782335DF134ABF /* Pods-TraccarClientTests.release.xcconfig */;
+			baseConfigurationReference = BBD2B88928B29CC4D61A4F16 /* Pods-TraccarTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -948,7 +940,7 @@
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
-				INFOPLIST_FILE = TraccarClientTests/Info.plist;
+				INFOPLIST_FILE = TraccarTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -961,7 +953,7 @@
 				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_SWIFT3_OBJC_INFERENCE = On;
 				SWIFT_VERSION = 5.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TraccarClient.app/TraccarClient";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Traccar.app/Traccar";
 			};
 			name = Release;
 		};
@@ -978,7 +970,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		CED4873E17DB1BF6007FCF57 /* Build configuration list for PBXNativeTarget "TraccarClient" */ = {
+		CED4873E17DB1BF6007FCF57 /* Build configuration list for PBXNativeTarget "Traccar" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				CED4873F17DB1BF6007FCF57 /* Debug */,
@@ -988,7 +980,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		CEE286D61B80839700AE7E83 /* Build configuration list for PBXNativeTarget "TraccarClientTests" */ = {
+		CEE286D61B80839700AE7E83 /* Build configuration list for PBXNativeTarget "TraccarTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				CEE286D71B80839700AE7E83 /* Debug */,
@@ -1038,13 +1030,24 @@
 /* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
-		CBCE82F01B8D265800A7318B /* TraccarClient.xcdatamodeld */ = {
+		277E9B942A60B4DB003F6B28 /* TraccarClient.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				CBCE82F11B8D265800A7318B /* TraccarClient.xcdatamodel */,
+				277E9B952A60B4DB003F6B28 /* TraccarClient.xcdatamodel */,
 			);
-			currentVersion = CBCE82F11B8D265800A7318B /* TraccarClient.xcdatamodel */;
-			path = TraccarClient.xcdatamodeld;
+			currentVersion = 277E9B952A60B4DB003F6B28 /* TraccarClient.xcdatamodel */;
+			name = TraccarClient.xcdatamodeld;
+			path = Traccar/TraccarClient.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+		CBCE82F01B8D265800A7318B /* Traccar.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				CBCE82F11B8D265800A7318B /* Traccar.xcdatamodel */,
+			);
+			currentVersion = CBCE82F11B8D265800A7318B /* Traccar.xcdatamodel */;
+			path = Traccar.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
