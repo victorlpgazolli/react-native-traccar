@@ -1,0 +1,46 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<resources>
+  <string name="app_name">Traccar Client</string>
+  <string name="app_logo">Traccar</string>
+  <string name="shortcut_start">Dienst starten</string>
+  <string name="shortcut_stop">Dienst stoppen</string>
+  <string name="shortcut_sos">SOS senden</string>
+  <string name="channel_default">Primärkanal</string>
+  <string name="settings_id_title">Gerätekennung</string>
+  <string name="settings_url_title">Server URL</string>
+  <string name="settings_url_summary">Tracking Server URL</string>
+  <string name="settings_interval_title">Frequenz</string>
+  <string name="settings_interval_summary">Meldung nach Zeit in Sekunden</string>
+  <string name="settings_distance_title">Entfernung</string>
+  <string name="settings_distance_summary">Meldung nach Entfernung in Metern</string>
+  <string name="settings_angle_title">Winkel</string>
+  <string name="settings_angle_summary">Meldung nach Winkel in Grad</string>
+  <string name="settings_status_title">Dienststatus</string>
+  <string name="settings_status_off">Start</string>
+  <string name="settings_status_on">Stop</string>
+  <string name="settings_status_off_summary">Dienst inaktiv</string>
+  <string name="settings_status_on_summary">Dienst aktiv</string>
+  <string name="settings_buffer">Offline puffern</string>
+  <string name="settings_buffer_off_summary">Puffern aus</string>
+  <string name="settings_buffer_on_summary">Puffern ein</string>
+  <string name="settings_accuracy_title">Positionsgenauigkeit</string>
+  <string name="settings_accuracy_summary">Erwünschte Positionsgenauigkeit</string>
+  <string name="settings_accuracy_high">Hoch</string>
+  <string name="settings_accuracy_medium">Mittel</string>
+  <string name="settings_accuracy_low">Niedrig</string>
+  <string name="settings_foreground_title">Vordergrund Service</string>
+  <string name="settings_foreground_summary">Servicepriorität erhöhen</string>
+  <string name="menu_status">Status</string>
+  <string name="menu_shortcuts">Verknüpfung hinzufügen</string>
+  <string name="menu_clear">Leeren</string>
+  <string name="status_service_create">Dienst gestartet</string>
+  <string name="status_service_destroy">Dienst gestoppt</string>
+  <string name="status_send_success">Erfolgreich gesendet</string>
+  <string name="status_send_fail">Übertragung fehlerhaft</string>
+  <string name="status_location_update">Positionsupdate</string>
+  <string name="status_network_online">Netzwerk online</string>
+  <string name="status_network_offline">Netzwerk offline</string>
+  <string name="hidden_app_name">Geräteeinstellungen</string>
+  <string name="hidden_alert">Die App wurde versteckt. Um sie wieder zu öffnen, wähle 8722227 (TRACCAR).</string>
+  <string name="error_msg_invalid_url">Bitte eine gültige http:// oder https:// URL eingeben</string>
+</resources>

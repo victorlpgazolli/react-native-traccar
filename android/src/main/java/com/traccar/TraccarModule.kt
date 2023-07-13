@@ -5,18 +5,22 @@ import com.facebook.react.bridge.ReactContextBaseJavaModule
 import com.facebook.react.bridge.ReactMethod
 import com.facebook.react.bridge.Promise
 
-class TraccarModule(reactContext: ReactApplicationContext) :
-  ReactContextBaseJavaModule(reactContext) {
+
+class TraccarModule(reactContext: ReactApplicationContext) : ReactContextBaseJavaModule(reactContext) {
+  private val reactContext: ReactApplicationContext = reactContext
 
   override fun getName(): String {
     return NAME
   }
 
-  // Example method
-  // See https://reactnative.dev/docs/native-modules-android
   @ReactMethod
-  fun multiply(a: Double, b: Double, promise: Promise) {
-    promise.resolve(a * b)
+  fun startTrackingService() {
+    TraccarClientBridge().startTrackingService(this.reactContext)
+  }
+
+  @ReactMethod
+  fun stopTrackingService() {
+    TraccarClientBridge().stopTrackingService(this.reactContext)
   }
 
   companion object {

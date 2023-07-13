@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<resources>
+  <string name="app_name">ລາວຈີພີເອສ໌ຄາຣ໌</string>
+  <string name="app_logo">ລາວຈີພີເອສ໌ຄາຣ໌</string>
+  <string name="settings_id_title">ໝາຍເລກອຸປະກອນ</string>
+  <string name="settings_interval_title">ຄວາມຖີ່</string>
+  <string name="settings_status_title">ສະຖານະໃຊ້ງານ</string>
+  <string name="settings_status_off">ເລີ່ມໃຊ້ງານ</string>
+  <string name="settings_status_on">ຢຸດໃຊ້ງານ</string>
+  <string name="settings_status_off_summary">ການໃຊ້ງານໄດ້ຢຸດລົງ</string>
+  <string name="settings_status_on_summary">ການໃຊ້ງານກຳລັງທຳງານຢູ່</string>
+  <string name="settings_foreground_title">ເຊີວິດໂຟກຣາວດ໌</string>
+  <string name="settings_foreground_summary">ເພີ່ມເຊີວິດໄພອໍຣິດຕີ້</string>
+  <string name="menu_status">ສະຖານະ</string>
+  <string name="menu_shortcuts">ເພີ່ມຊອດຄັດ</string>
+  <string name="menu_clear">ລົບລ້າງ</string>
+  <string name="status_send_fail">ມີຂໍ້ຜິດພາດໃນການສົ່ງຂໍ້ມູນ</string>
+  <string name="status_location_update">ສະຖານທີ່ພິກັດໄດ້ອັບເດດ</string>
+  <string name="hidden_app_name">ການຕັ້ງຄ່າອຸປະກອນ</string>
+  <string name="hidden_alert">ແອັບໂຕນີ້ໄດ້ຖືກເຊື່ອງໄວ້. ຖ້າຢາກເປີດຂຶ້ນມາອີກຄັ້ງກະລຸນາກົດໝາຍເລກ 8722227 (TRACCAR).</string>
+</resources>

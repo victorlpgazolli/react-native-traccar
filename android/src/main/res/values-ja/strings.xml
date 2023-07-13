@@ -1,0 +1,46 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<resources>
+  <string name="app_name">Traccar クライアント</string>
+  <string name="app_logo">Traccar</string>
+  <string name="shortcut_start">サービスを開始</string>
+  <string name="shortcut_stop">サービスを停止</string>
+  <string name="shortcut_sos">SOSを送信</string>
+  <string name="channel_default">プライマリーチャンネル</string>
+  <string name="settings_id_title">デバイス ID</string>
+  <string name="settings_url_title">サーバー URL</string>
+  <string name="settings_url_summary">トラッキングサーバーの URL</string>
+  <string name="settings_interval_title">周期</string>
+  <string name="settings_interval_summary">報告間隔（秒）</string>
+  <string name="settings_distance_title">距離</string>
+  <string name="settings_distance_summary">報告距離（m）</string>
+  <string name="settings_angle_title">角度</string>
+  <string name="settings_angle_summary">報告角度（度）</string>
+  <string name="settings_status_title">サービスステータス</string>
+  <string name="settings_status_off">開始</string>
+  <string name="settings_status_on">停止</string>
+  <string name="settings_status_off_summary">サービス停止中</string>
+  <string name="settings_status_on_summary">サービス実行中</string>
+  <string name="settings_buffer">オフラインバッファリング</string>
+  <string name="settings_buffer_off_summary">バッファリング オフ</string>
+  <string name="settings_buffer_on_summary">バッファリング オン</string>
+  <string name="settings_accuracy_title">位置情報の精度</string>
+  <string name="settings_accuracy_summary">要求される位置情報の精度</string>
+  <string name="settings_accuracy_high">高</string>
+  <string name="settings_accuracy_medium">中</string>
+  <string name="settings_accuracy_low">低</string>
+  <string name="settings_foreground_title">フォアグラウンドサービス</string>
+  <string name="settings_foreground_summary">サービス優先度を上げる</string>
+  <string name="menu_status">ステータス</string>
+  <string name="menu_shortcuts">ショートカットを追加</string>
+  <string name="menu_clear">クリア</string>
+  <string name="status_service_create">サービスを開始しました</string>
+  <string name="status_service_destroy">サービスを停止しました</string>
+  <string name="status_send_success">送信に成功しました</string>
+  <string name="status_send_fail">送信に失敗しました</string>
+  <string name="status_location_update">位置情報更新</string>
+  <string name="status_network_online">ネットワーク　オンライン</string>
+  <string name="status_network_offline">ネットワーク　オフライン</string>
+  <string name="hidden_app_name">デバイス設定</string>
+  <string name="hidden_alert">アプリは非表示になりました。 もう一度開くには 8722227 (TRACCAR) にダイヤルしてください。</string>
+  <string name="error_msg_invalid_url">http:// または https:// から始まるURL を正しく入力してください。</string>
+</resources>

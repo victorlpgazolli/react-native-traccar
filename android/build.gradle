@@ -9,6 +9,7 @@ buildscript {
 
   dependencies {
     classpath "com.android.tools.build:gradle:7.2.1"
+    classpath 'com.google.gms:google-services:4.3.15'
     // noinspection DifferentKotlinGradleVersion
     classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
   }
@@ -97,6 +98,15 @@ dependencies {
   //noinspection GradleDynamicVersion
   implementation "com.facebook.react:react-native:+"
   implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+  implementation 'com.google.android.material:material:1.6.1' // wait for preference-ktx update
+  implementation 'androidx.multidex:multidex:2.0.1'
+  implementation 'androidx.preference:preference-ktx:1.2.0'
+  implementation 'androidx.core:core-ktx:1.9.0'
+  implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+  implementation 'com.github.judemanutd:autostarter:1.1.0'
+  implementation('dev.doubledot.doki:library:0.0.1@aar') {
+  transitive = true
+  }
 }
 
 if (isNewArchitectureEnabled()) {

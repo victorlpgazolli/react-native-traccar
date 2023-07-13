@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<resources>
+  <string name="app_name">ម៉ាស៊ីនភ្ញៀវ Traccar</string>
+  <string name="app_logo">Traccar</string>
+  <string name="settings_id_title">ឧបករណ៍សម្គាល់ឧបករណ៍</string>
+  <string name="settings_interval_title">ជាញឹកញាប់</string>
+  <string name="settings_status_title">ស្ថានភាពសេវា</string>
+  <string name="settings_status_off">ចាប់ផ្តើម</string>
+  <string name="settings_status_on">បញ្ឈប់</string>
+  <string name="settings_status_off_summary">សេវាឈប់</string>
+  <string name="settings_status_on_summary">កំពុងរត់សេវា</string>
+  <string name="settings_foreground_title">សេវាផ្ទៃខាងមុខ</string>
+  <string name="settings_foreground_summary">បង្កើនអាទិភាពសេវា</string>
+  <string name="menu_status">ស្ថានភាព</string>
+  <string name="menu_shortcuts">បន្ថែមផ្លូវកាត់</string>
+  <string name="menu_clear">ដើម្បីជម្រះ</string>
+  <string name="status_send_success">ផ្ញើដោយជោគជ័យ</string>
+  <string name="status_send_fail">ការផ្ញើបានបរាជ័យ</string>
+  <string name="status_location_update">ធ្វើឱ្យទាន់សម័យទីតាំង</string>
+  <string name="hidden_app_name">ការកំណត់ឧបករណ៍</string>
+  <string name="hidden_alert">កម្មវិធីនេះត្រូវបានលាក់។ ដើម្បីបើកវាម្តងទៀតសូមចុច 8722227 (TRACCAR) ។</string>
+</resources>

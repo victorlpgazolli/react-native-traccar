@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<resources>
+  <string name="app_name">Traccar Yönetim</string>
+  <string name="app_logo">Traccar</string>
+  <string name="shortcut_start">Servisi Başlat</string>
+  <string name="shortcut_stop">Servisi Durdur</string>
+  <string name="shortcut_sos">Yardım Çağrısı Gönder</string>
+  <string name="channel_default">Birincil Kanal</string>
+  <string name="settings_id_title">Cihaz Kimliği</string>
+  <string name="settings_url_title">Sunucu adresi</string>
+  <string name="settings_url_summary">Takip sunucusu adresi</string>
+  <string name="settings_interval_title">Sıklık</string>
+  <string name="settings_interval_summary">Saniye cinsinden bildirim döngüsü</string>
+  <string name="settings_distance_title">Mesafe</string>
+  <string name="settings_distance_summary">Metre cinsinden mesafe bildirimi</string>
+  <string name="settings_angle_title">Açı</string>
+  <string name="settings_angle_summary">Derece cinsinden açı bildirimi</string>
+  <string name="settings_status_title">Servis Durumu</string>
+  <string name="settings_status_off">Başlat</string>
+  <string name="settings_status_on">Durdur</string>
+  <string name="settings_status_off_summary">Servis Durdu</string>
+  <string name="settings_status_on_summary">Servis Çalışıyor</string>
+  <string name="settings_accuracy_title">Yer Doğruluğu</string>
+  <string name="settings_accuracy_summary">İstenilen Yer Doğruluğu</string>
+  <string name="settings_accuracy_high">Yüksek</string>
+  <string name="settings_accuracy_medium">Orta</string>
+  <string name="settings_accuracy_low">Alçak</string>
+  <string name="settings_foreground_title">Önplan servisi</string>
+  <string name="settings_foreground_summary">Servis önceliği arttır</string>
+  <string name="menu_status">Durum</string>
+  <string name="menu_shortcuts">Kısayol ekle</string>
+  <string name="menu_clear">Temizle</string>
+  <string name="status_service_create">Servis Başlatıldı</string>
+  <string name="status_service_destroy">Servis Durduruldu</string>
+  <string name="status_send_success">Gönderme başarılı</string>
+  <string name="status_send_fail">Gönderme başarısız</string>
+  <string name="status_location_update">Yer güncellendi</string>
+  <string name="status_network_online">Ağa Bağlandı</string>
+  <string name="status_network_offline">Ağ Bağlantısı Kesildi</string>
+  <string name="hidden_app_name">Cihaz Ayarları</string>
+  <string name="hidden_alert">Bu uygulama arkaplanda gizli olarak çalışmaktadır. Tekrar görmek için lütfen 8722227 tuşlayın. Arayın. (TRACCAR)</string>
+  <string name="error_msg_invalid_url">Lütfen geçerli bir adres girin http:// veya https://</string>
+</resources>

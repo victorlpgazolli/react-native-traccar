@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<resources>
+  <string name="app_name">Máy khách Traccar</string>
+  <string name="app_logo">Traccar</string>
+  <string name="settings_id_title">Định danh thiết bị</string>
+  <string name="settings_url_title">Đường dẫn server</string>
+  <string name="settings_url_summary">Đường link server giám sát</string>
+  <string name="settings_interval_title">Tần suất</string>
+  <string name="settings_interval_summary">Thời gian báo cáo định kỳ tính bằng giây</string>
+  <string name="settings_distance_title">Khoảng cách</string>
+  <string name="settings_distance_summary">Khoảng cách đo theo mét</string>
+  <string name="settings_angle_title">Góc</string>
+  <string name="settings_angle_summary">Đơn vị tính theo độ</string>
+  <string name="settings_status_title">Trạng thái dịch vụ</string>
+  <string name="settings_status_off">Bắt đầu</string>
+  <string name="settings_status_on">Kết thúc</string>
+  <string name="settings_status_off_summary">Dịch vụ kết thúc</string>
+  <string name="settings_status_on_summary">Dịch vụ đang hoạt động</string>
+  <string name="settings_foreground_title">Dịch vụ chạy nổi</string>
+  <string name="settings_foreground_summary">Tăng thứ tự ưu tiên dịch vụ</string>
+  <string name="menu_status">Trạng thái</string>
+  <string name="menu_shortcuts">Thêm phím tắt</string>
+  <string name="menu_clear">Xóa</string>
+  <string name="status_send_success">Gửi thành công</string>
+  <string name="status_send_fail">Gửi lỗi</string>
+  <string name="status_location_update">Vị trí đã được cập nhật</string>
+  <string name="hidden_app_name">Cài đặt thiết bị</string>
+  <string name="hidden_alert">Ứng dụng đã được ẩn. Để mở lại xin vui lòng gọi 8722227 (TRACCAR).</string>
+  <string name="error_msg_invalid_url">Vui lòng nhập đường dẫn hợp lệ http:// hoặc https://</string>
+</resources>

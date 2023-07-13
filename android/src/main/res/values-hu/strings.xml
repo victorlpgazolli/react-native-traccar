@@ -1,0 +1,56 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<resources>
+  <string name="app_name">Traccar Kliens</string>
+  <string name="app_logo">Traccar</string>
+  <string name="shortcut_start">Szolgáltatás indítása</string>
+  <string name="shortcut_stop">Szolgáltatás leállítása</string>
+  <string name="shortcut_sos">SOS küldése</string>
+  <string name="channel_default">Elsődleges csatorna</string>
+  <string name="settings_id_title">Eszközazonosító</string>
+  <string name="settings_url_title">Szerver URL</string>
+  <string name="settings_url_summary">Nyomkövető szerver URL</string>
+  <string name="settings_interval_title">Frekvencia</string>
+  <string name="settings_interval_summary">Jelentési időköz másodpercben</string>
+  <string name="settings_distance_title">Távolság</string>
+  <string name="settings_distance_summary">Jelentés: távolság méterben</string>
+  <string name="settings_angle_title">Fok</string>
+  <string name="settings_angle_summary">Jelentés: fok szögben</string>
+  <string name="settings_status_title">Szolgáltatás státusza</string>
+  <string name="settings_status_off">Indítás</string>
+  <string name="settings_status_on">Megállítás</string>
+  <string name="settings_status_off_summary">Szolgáltatás megállítva</string>
+  <string name="settings_status_on_summary">Szolgáltatás elindítva</string>
+  <string name="settings_buffer">Offline pufferelés</string>
+  <string name="settings_buffer_off_summary">Pufferelés ki</string>
+  <string name="settings_buffer_on_summary">Pufferelés be</string>
+  <string name="settings_wakelock">Ébresztési zár</string>
+  <string name="settings_wakelock_off_summary">Ébresztési zár ki</string>
+  <string name="settings_wakelock_on_summary">Ébresztési zár be</string>
+  <string name="settings_accuracy_title">Pozíció pontossága</string>
+  <string name="settings_accuracy_summary">Kívánt pozíció pontosság</string>
+  <string name="settings_accuracy_high">Magas</string>
+  <string name="settings_accuracy_medium">Közepes</string>
+  <string name="settings_accuracy_low">Alacsony</string>
+  <string name="settings_foreground_title">Előtér szolgáltatás</string>
+  <string name="settings_foreground_summary">Szolgáltatás prioritásának emelése</string>
+  <string name="menu_status">Státusz</string>
+  <string name="menu_info">Infó</string>
+  <string name="menu_shortcuts">Parancsikon hozzáadása</string>
+  <string name="menu_clear">Töröl</string>
+  <string name="status_service_create">Szolgáltatás elindítva</string>
+  <string name="status_service_destroy">Szolgáltatás leállítva</string>
+  <string name="status_send_success">Küldés sikeres</string>
+  <string name="status_send_fail">Küldés sikertelen</string>
+  <string name="status_location_update">Pozíció frissítés</string>
+  <string name="status_network_online">Hálózat aktív</string>
+  <string name="status_network_offline">Hálózat nem aktív</string>
+  <string name="hidden_app_name">Eszköz beállítások</string>
+  <string name="hidden_alert">Ez az applikáció el lett rejtve. Megnyitásához  kérjük hívja a 8722227 (TRACCAR) telefonszámot.</string>
+  <string name="error_msg_invalid_url">Adjon meg egy érvényes URL-t (http:// vagy https://)</string>
+  <string name="request_exception">A folyamatos helyadatok
+gyűjtéséhez kapcsolja ki
+az alkalmazás akkumulátor 
+optimazilását.</string>
+  <string name="request_background">A folyamatos helyadat gyűjtéshez engedélyezze a \"%s\" jogosultságot.</string>
+  <string name="request_background_option">Mindig engedélyezve</string>
+</resources>

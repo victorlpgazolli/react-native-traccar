@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<resources>
+  <string name="app_name">Traccar клиент</string>
+  <string name="app_logo">Traccar</string>
+  <string name="shortcut_start">Стартирай услугата</string>
+  <string name="shortcut_stop">Спри услугата</string>
+  <string name="shortcut_sos">Изпрати SOS</string>
+  <string name="channel_default">Основен канал</string>
+  <string name="settings_id_title">Идентификатор</string>
+  <string name="settings_url_title">Адрес на сървъра</string>
+  <string name="settings_url_summary">Адрес на проследяващият сървър</string>
+  <string name="settings_interval_title">Честота</string>
+  <string name="settings_interval_summary">Докладван интервал в сек.</string>
+  <string name="settings_distance_title">Разстояние</string>
+  <string name="settings_distance_summary">Докладвано разстояние в метри</string>
+  <string name="settings_angle_title">Ъгъл</string>
+  <string name="settings_angle_summary">Докладван ъгъл в градуси</string>
+  <string name="settings_status_title">Състояние на услугата</string>
+  <string name="settings_status_off">Старт</string>
+  <string name="settings_status_on">Стоп</string>
+  <string name="settings_status_off_summary">Услугата е спряна</string>
+  <string name="settings_status_on_summary">Услугата работи</string>
+  <string name="settings_accuracy_title">Точност на местоположението</string>
+  <string name="settings_accuracy_summary">Желана точност на местоположението</string>
+  <string name="settings_accuracy_high">Висока</string>
+  <string name="settings_accuracy_medium">Средна</string>
+  <string name="settings_accuracy_low">Ниска</string>
+  <string name="settings_foreground_title">Foreground service</string>
+  <string name="settings_foreground_summary">Увеличаване на приоритета на услугата</string>
+  <string name="menu_status">Състояние</string>
+  <string name="menu_shortcuts">Добави пряк път</string>
+  <string name="menu_clear">Изтрий</string>
+  <string name="status_service_create">Услугата стартира</string>
+  <string name="status_service_destroy">Услугата спряна</string>
+  <string name="status_send_success">Успешно изпращане</string>
+  <string name="status_send_fail">Грешка в изпращането</string>
+  <string name="status_location_update">Местоположението е обновено</string>
+  <string name="status_network_online">Има връзка с мрежата</string>
+  <string name="status_network_offline">Няма връзка с мрежа</string>
+  <string name="hidden_app_name">Настройки</string>
+  <string name="hidden_alert">Приложението е скрито. За да го отворите отново, моля наберете 8722227 (TRACCAR).</string>
+  <string name="error_msg_invalid_url">Моля въведете валиден адрес</string>
+</resources>
