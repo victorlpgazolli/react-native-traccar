@@ -5,7 +5,6 @@ import Traccar from 'react-native-traccar';
 import { request, PERMISSIONS, RESULTS } from 'react-native-permissions';
 export default function App() {
 
-
   const startTrackingService = async () => {
     const granted = await request(
       Platform.select({
