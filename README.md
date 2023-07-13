@@ -11,11 +11,20 @@ npm install react-native-traccar
 ## Usage
 
 ```js
-import { multiply } from 'react-native-traccar';
+import { 
+    startTrackingService,
+    stopTrackingService
+ } from 'react-native-traccar';
 
 // ...
 
-const result = await multiply(3, 7);
+startTrackingService()
+
+// ...
+
+
+stopTrackingService()
+
 ```
 
 ## Contributing
