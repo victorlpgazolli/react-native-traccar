@@ -1,0 +1,18 @@
+require_relative '../node_modules/react-native/scripts/react_native_pods'
+require_relative '../node_modules/@react-native-community/cli-platform-ios/native_modules'
+# Uncomment the next line to define a global platform for your project
+# platform :ios, '9.0'
+
+target 'TraccarClient' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+  use_react_native!
+
+  # Pods for TraccarClient
+
+  target 'TraccarClientTests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+end

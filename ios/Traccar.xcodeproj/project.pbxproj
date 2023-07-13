@@ -3,156 +3,755 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5E555C0D2413F4C50049A1A2 /* Traccar.mm in Sources */ = {isa = PBXBuildFile; fileRef = B3E7B5891CC2AC0600A0062D /* Traccar.mm */; };
-		F4FF95D7245B92E800C19C63 /*  Traccar.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4FF95D6245B92E800C19C63 /*  Traccar.swift */; };
+		2767329B2A60AB14006EDA2A /* Traccar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 276732992A60AB14006EDA2A /* Traccar.swift */; };
+		2767329C2A60AB14006EDA2A /* Traccar.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2767329A2A60AB14006EDA2A /* Traccar.mm */; };
+		5E394EBE28A9CC7600396F33 /* BatteryStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E394EBD28A9CC7600396F33 /* BatteryStatus.swift */; };
+		5E716A271F63A0B100A2DBC3 /* DistanceCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E716A261F63A0B100A2DBC3 /* DistanceCalculator.swift */; };
+		5E716A291F63A45A00A2DBC3 /* RequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E716A281F63A45A00A2DBC3 /* RequestManager.swift */; };
+		5E716A2B1F63A60800A2DBC3 /* ProtocolFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E716A2A1F63A60800A2DBC3 /* ProtocolFormatter.swift */; };
+		5EE3CA342998948F002C86E4 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 5EE3CA332998948F002C86E4 /* FirebaseAnalytics */; };
+		5EE3CA362998948F002C86E4 /* FirebaseCrashlytics in Frameworks */ = {isa = PBXBuildFile; productRef = 5EE3CA352998948F002C86E4 /* FirebaseCrashlytics */; };
+		5EE3CA39299894B9002C86E4 /* InAppSettingsKit in Frameworks */ = {isa = PBXBuildFile; productRef = 5EE3CA38299894B9002C86E4 /* InAppSettingsKit */; };
+		6413CBE9A45AA4D507172978 /* Pods_TraccarClientTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C53F15E7D8FDA05531F24F1 /* Pods_TraccarClientTests.framework */; };
+		CB4197931F674A3E008F301C /* DatabaseHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB4197921F674A3E008F301C /* DatabaseHelper.swift */; };
+		CB4197991F67724F008F301C /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB4197981F67724F008F301C /* NetworkManager.swift */; };
+		CB7ED0801F6602CD00A33FCF /* Position.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB7ED07F1F6602CD00A33FCF /* Position.swift */; };
+		CB7ED0821F661B4F00A33FCF /* PositionProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB7ED0811F661B4F00A33FCF /* PositionProvider.swift */; };
+		CB7ED0841F662BAF00A33FCF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB7ED0831F662BAF00A33FCF /* AppDelegate.swift */; };
+		CBAA0F7D1F68E14C008BBBBE /* StatusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBAA0F7C1F68E14C008BBBBE /* StatusViewController.swift */; };
+		CBAA0F7F1F68E807008BBBBE /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBAA0F7E1F68E807008BBBBE /* MainViewController.swift */; };
+		CBAA0F811F68EB62008BBBBE /* TrackingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBAA0F801F68EB62008BBBBE /* TrackingController.swift */; };
+		CBCE82EF1B8D253600A7318B /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBCE82EE1B8D253600A7318B /* CoreData.framework */; };
+		CBCE82F21B8D265800A7318B /* TraccarClient.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CBCE82F01B8D265800A7318B /* TraccarClient.xcdatamodeld */; };
+		CBDEEB8A1B8EB6A4006BC126 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBDEEB891B8EB6A4006BC126 /* SystemConfiguration.framework */; };
+		CE5899C81B115C9100ED70D2 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE5899C71B115C9100ED70D2 /* Images.xcassets */; };
+		CED4871C17DB1BF6007FCF57 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CED4871B17DB1BF6007FCF57 /* UIKit.framework */; };
+		CED4871E17DB1BF6007FCF57 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CED4871D17DB1BF6007FCF57 /* Foundation.framework */; };
+		CED4872017DB1BF6007FCF57 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CED4871F17DB1BF6007FCF57 /* CoreGraphics.framework */; };
+		CED4879917DB1DF4007FCF57 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CED4879817DB1DF4007FCF57 /* MessageUI.framework */; };
+		CED4879B17DB1E61007FCF57 /* InAppSettings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = CED4879A17DB1E61007FCF57 /* InAppSettings.bundle */; };
+		CEDB048717ED50C1000E7EDF /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEDB048617ED50C1000E7EDF /* CoreLocation.framework */; };
+		CEF643271B919FFA00195CEA /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEF643241B919FFA00195CEA /* LaunchScreen.xib */; };
+		CEF6433C1B91AA9400195CEA /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CED4873317DB1BF6007FCF57 /* MainStoryboard.storyboard */; };
+		CEF6433D1B91AA9400195CEA /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = CEF643371B91A94600195CEA /* Localizable.strings */; };
+		D3D0CB4C4E482DE1EF11F2ED /* Pods_TraccarClient.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBD934E9843AB5CFDC8DF4A5 /* Pods_TraccarClient.framework */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		CEE286D41B80839700AE7E83 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CED4871017DB1BF6007FCF57 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CED4871717DB1BF6007FCF57;
+			remoteInfo = TraccarClient;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXCopyFilesBuildPhase section */
-		58B511D91A9E6C8500147676 /* CopyFiles */ = {
+		CEFA94EF1EA2EE31009B5809 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
-			dstPath = "include/$(PRODUCT_NAME)";
-			dstSubfolderSpec = 16;
+			dstPath = "";
+			dstSubfolderSpec = 10;
 			files = (
 			);
+			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		134814201AA4EA6300B7C361 /* libTraccar.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libTraccar.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		B3E7B5891CC2AC0600A0062D /* Traccar.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Traccar.mm; sourceTree = "<group>"; };
-		F4FF95D5245B92E700C19C63 /* Traccar-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Traccar-Bridging-Header.h"; sourceTree = "<group>"; };
-		F4FF95D6245B92E800C19C63 /* Traccar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Traccar.swift; sourceTree = "<group>"; };
+		276732982A60AB14006EDA2A /* Traccar-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Traccar-Bridging-Header.h"; sourceTree = "<group>"; };
+		276732992A60AB14006EDA2A /* Traccar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Traccar.swift; sourceTree = "<group>"; };
+		2767329A2A60AB14006EDA2A /* Traccar.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Traccar.mm; sourceTree = "<group>"; };
+		4C3194FDD9E4FCFD01503197 /* Pods-TraccarClientTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TraccarClientTests.debug.xcconfig"; path = "Target Support Files/Pods-TraccarClientTests/Pods-TraccarClientTests.debug.xcconfig"; sourceTree = "<group>"; };
+		5C66AFDC1E83BBCC7E6D8A83 /* Pods-TraccarClientTests.google.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TraccarClientTests.google.xcconfig"; path = "Target Support Files/Pods-TraccarClientTests/Pods-TraccarClientTests.google.xcconfig"; sourceTree = "<group>"; };
+		5E394EBD28A9CC7600396F33 /* BatteryStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BatteryStatus.swift; sourceTree = "<group>"; };
+		5E716A261F63A0B100A2DBC3 /* DistanceCalculator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DistanceCalculator.swift; sourceTree = "<group>"; };
+		5E716A281F63A45A00A2DBC3 /* RequestManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestManager.swift; sourceTree = "<group>"; };
+		5E716A2A1F63A60800A2DBC3 /* ProtocolFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProtocolFormatter.swift; sourceTree = "<group>"; };
+		6C53F15E7D8FDA05531F24F1 /* Pods_TraccarClientTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TraccarClientTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		81AC353AE5F096BE743EDB61 /* Pods-TraccarClient.google.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TraccarClient.google.xcconfig"; path = "Target Support Files/Pods-TraccarClient/Pods-TraccarClient.google.xcconfig"; sourceTree = "<group>"; };
+		9B6B6990BE3774CFE5CE3A6F /* Pods-TraccarClient.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TraccarClient.debug.xcconfig"; path = "Target Support Files/Pods-TraccarClient/Pods-TraccarClient.debug.xcconfig"; sourceTree = "<group>"; };
+		B03FE537774EB780548721DA /* Pods-TraccarClient.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TraccarClient.release.xcconfig"; path = "Target Support Files/Pods-TraccarClient/Pods-TraccarClient.release.xcconfig"; sourceTree = "<group>"; };
+		C90EDD4B96782335DF134ABF /* Pods-TraccarClientTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TraccarClientTests.release.xcconfig"; path = "Target Support Files/Pods-TraccarClientTests/Pods-TraccarClientTests.release.xcconfig"; sourceTree = "<group>"; };
+		CB4197921F674A3E008F301C /* DatabaseHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatabaseHelper.swift; sourceTree = "<group>"; };
+		CB4197981F67724F008F301C /* NetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		CB7ED07F1F6602CD00A33FCF /* Position.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Position.swift; sourceTree = "<group>"; };
+		CB7ED0811F661B4F00A33FCF /* PositionProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PositionProvider.swift; sourceTree = "<group>"; };
+		CB7ED0831F662BAF00A33FCF /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		CBAA0F7C1F68E14C008BBBBE /* StatusViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatusViewController.swift; sourceTree = "<group>"; };
+		CBAA0F7E1F68E807008BBBBE /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		CBAA0F801F68EB62008BBBBE /* TrackingController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrackingController.swift; sourceTree = "<group>"; };
+		CBCE82EE1B8D253600A7318B /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		CBCE82F11B8D265800A7318B /* TraccarClient.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TraccarClient.xcdatamodel; sourceTree = "<group>"; };
+		CBDEEB891B8EB6A4006BC126 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		CE2FA5181CB935C9007F86B4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/MainStoryboard.strings; sourceTree = "<group>"; };
+		CE4B80FE1EC71CAE00D1C41D /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/MainStoryboard.strings"; sourceTree = "<group>"; };
+		CE4B80FF1EC71CAE00D1C41D /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		CE4B81001EC71CCF00D1C41D /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/MainStoryboard.strings; sourceTree = "<group>"; };
+		CE4B81011EC71CCF00D1C41D /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/Localizable.strings; sourceTree = "<group>"; };
+		CE4B81021EC71CFF00D1C41D /* pl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pl; path = pl.lproj/MainStoryboard.strings; sourceTree = "<group>"; };
+		CE4B81031EC71CFF00D1C41D /* pl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pl; path = pl.lproj/Localizable.strings; sourceTree = "<group>"; };
+		CE4B81041EC71D1700D1C41D /* nl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = nl; path = nl.lproj/MainStoryboard.strings; sourceTree = "<group>"; };
+		CE4B81051EC71D1700D1C41D /* nl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = nl; path = nl.lproj/Localizable.strings; sourceTree = "<group>"; };
+		CE4B81061EC71D3600D1C41D /* zh */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = zh; path = zh.lproj/MainStoryboard.strings; sourceTree = "<group>"; };
+		CE4B81071EC71D3600D1C41D /* zh */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = zh; path = zh.lproj/Localizable.strings; sourceTree = "<group>"; };
+		CE4B81081EC71D4300D1C41D /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/MainStoryboard.strings; sourceTree = "<group>"; };
+		CE4B81091EC71D4300D1C41D /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/Localizable.strings; sourceTree = "<group>"; };
+		CE4B810A1EC71D4800D1C41D /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/MainStoryboard.strings; sourceTree = "<group>"; };
+		CE4B810B1EC71D4800D1C41D /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
+		CE5899C71B115C9100ED70D2 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		CED4871817DB1BF6007FCF57 /* TraccarClient.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TraccarClient.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CED4871B17DB1BF6007FCF57 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		CED4871D17DB1BF6007FCF57 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		CED4871F17DB1BF6007FCF57 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		CED4872317DB1BF6007FCF57 /* TraccarClient-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TraccarClient-Info.plist"; sourceTree = "<group>"; };
+		CED4872917DB1BF6007FCF57 /* TraccarClient-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TraccarClient-Prefix.pch"; sourceTree = "<group>"; };
+		CED4879817DB1DF4007FCF57 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		CED4879A17DB1E61007FCF57 /* InAppSettings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = InAppSettings.bundle; sourceTree = "<group>"; };
+		CEDB048617ED50C1000E7EDF /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		CEE286CE1B80839700AE7E83 /* TraccarClientTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TraccarClientTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CEECE4B91B91AE2B00EB6F4A /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
+		CEECE4BA1B91AE2C00EB6F4A /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
+		CEECE4BB1B91AE2D00EB6F4A /* pt */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pt; path = pt.lproj/Localizable.strings; sourceTree = "<group>"; };
+		CEF254DD1B905266001DEFD2 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/MainStoryboard.strings; sourceTree = "<group>"; };
+		CEF254DF1B9052EB001DEFD2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
+		CEF643241B919FFA00195CEA /* LaunchScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LaunchScreen.xib; sourceTree = "<group>"; };
+		CEF6432A1B91A48B00195CEA /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/MainStoryboard.strings; sourceTree = "<group>"; };
+		CEF6432C1B91A49400195CEA /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/MainStoryboard.strings; sourceTree = "<group>"; };
+		CEF6432E1B91A49700195CEA /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/MainStoryboard.strings; sourceTree = "<group>"; };
+		CEF643321B91A4BF00195CEA /* pt */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pt; path = pt.lproj/MainStoryboard.strings; sourceTree = "<group>"; };
+		CEF643361B91A94600195CEA /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
+		CEF643381B91A95700195CEA /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
+		CEF643391B91A98300195CEA /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
+		DBD934E9843AB5CFDC8DF4A5 /* Pods_TraccarClient.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TraccarClient.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		58B511D81A9E6C8500147676 /* Frameworks */ = {
+		CED4871517DB1BF6007FCF57 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CBDEEB8A1B8EB6A4006BC126 /* SystemConfiguration.framework in Frameworks */,
+				CBCE82EF1B8D253600A7318B /* CoreData.framework in Frameworks */,
+				5EE3CA342998948F002C86E4 /* FirebaseAnalytics in Frameworks */,
+				CEDB048717ED50C1000E7EDF /* CoreLocation.framework in Frameworks */,
+				CED4879917DB1DF4007FCF57 /* MessageUI.framework in Frameworks */,
+				CED4871C17DB1BF6007FCF57 /* UIKit.framework in Frameworks */,
+				5EE3CA362998948F002C86E4 /* FirebaseCrashlytics in Frameworks */,
+				5EE3CA39299894B9002C86E4 /* InAppSettingsKit in Frameworks */,
+				CED4871E17DB1BF6007FCF57 /* Foundation.framework in Frameworks */,
+				CED4872017DB1BF6007FCF57 /* CoreGraphics.framework in Frameworks */,
+				D3D0CB4C4E482DE1EF11F2ED /* Pods_TraccarClient.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CEE286CB1B80839600AE7E83 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6413CBE9A45AA4D507172978 /* Pods_TraccarClientTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		134814211AA4EA7D00B7C361 /* Products */ = {
+		365CE99BC81E88EE699AF8E6 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				134814201AA4EA6300B7C361 /* libTraccar.a */,
+				9B6B6990BE3774CFE5CE3A6F /* Pods-TraccarClient.debug.xcconfig */,
+				B03FE537774EB780548721DA /* Pods-TraccarClient.release.xcconfig */,
+				81AC353AE5F096BE743EDB61 /* Pods-TraccarClient.google.xcconfig */,
+				4C3194FDD9E4FCFD01503197 /* Pods-TraccarClientTests.debug.xcconfig */,
+				C90EDD4B96782335DF134ABF /* Pods-TraccarClientTests.release.xcconfig */,
+				5C66AFDC1E83BBCC7E6D8A83 /* Pods-TraccarClientTests.google.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		CED4870F17DB1BF6007FCF57 = {
+			isa = PBXGroup;
+			children = (
+				CED4872117DB1BF6007FCF57 /* Traccar */,
+				CED4871A17DB1BF6007FCF57 /* Frameworks */,
+				CED4871917DB1BF6007FCF57 /* Products */,
+				365CE99BC81E88EE699AF8E6 /* Pods */,
+			);
+			sourceTree = "<group>";
+		};
+		CED4871917DB1BF6007FCF57 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CED4871817DB1BF6007FCF57 /* TraccarClient.app */,
+				CEE286CE1B80839700AE7E83 /* TraccarClientTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		58B511D21A9E6C8500147676 = {
+		CED4871A17DB1BF6007FCF57 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				F4FF95D6245B92E800C19C63 /* Traccar.swift */,
-				B3E7B5891CC2AC0600A0062D /* Traccar.mm */,
-				F4FF95D5245B92E700C19C63 /* Traccar-Bridging-Header.h */,
-				134814211AA4EA7D00B7C361 /* Products */,
+				CBDEEB891B8EB6A4006BC126 /* SystemConfiguration.framework */,
+				CBCE82EE1B8D253600A7318B /* CoreData.framework */,
+				CEDB048617ED50C1000E7EDF /* CoreLocation.framework */,
+				CED4879817DB1DF4007FCF57 /* MessageUI.framework */,
+				CED4871B17DB1BF6007FCF57 /* UIKit.framework */,
+				CED4871D17DB1BF6007FCF57 /* Foundation.framework */,
+				CED4871F17DB1BF6007FCF57 /* CoreGraphics.framework */,
+				DBD934E9843AB5CFDC8DF4A5 /* Pods_TraccarClient.framework */,
+				6C53F15E7D8FDA05531F24F1 /* Pods_TraccarClientTests.framework */,
 			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CED4872117DB1BF6007FCF57 /* Traccar */ = {
+			isa = PBXGroup;
+			children = (
+				276732982A60AB14006EDA2A /* Traccar-Bridging-Header.h */,
+				2767329A2A60AB14006EDA2A /* Traccar.mm */,
+				276732992A60AB14006EDA2A /* Traccar.swift */,
+				CE5899C71B115C9100ED70D2 /* Images.xcassets */,
+				CED4873317DB1BF6007FCF57 /* MainStoryboard.storyboard */,
+				CEF643241B919FFA00195CEA /* LaunchScreen.xib */,
+				CEF643371B91A94600195CEA /* Localizable.strings */,
+				CED4872217DB1BF6007FCF57 /* Supporting Files */,
+				CB7ED0831F662BAF00A33FCF /* AppDelegate.swift */,
+				CB4197921F674A3E008F301C /* DatabaseHelper.swift */,
+				5E716A261F63A0B100A2DBC3 /* DistanceCalculator.swift */,
+				CBAA0F7E1F68E807008BBBBE /* MainViewController.swift */,
+				CB4197981F67724F008F301C /* NetworkManager.swift */,
+				CB7ED07F1F6602CD00A33FCF /* Position.swift */,
+				5E394EBD28A9CC7600396F33 /* BatteryStatus.swift */,
+				CB7ED0811F661B4F00A33FCF /* PositionProvider.swift */,
+				5E716A2A1F63A60800A2DBC3 /* ProtocolFormatter.swift */,
+				5E716A281F63A45A00A2DBC3 /* RequestManager.swift */,
+				CBAA0F7C1F68E14C008BBBBE /* StatusViewController.swift */,
+				CBAA0F801F68EB62008BBBBE /* TrackingController.swift */,
+			);
+			path = Traccar;
+			sourceTree = "<group>";
+		};
+		CED4872217DB1BF6007FCF57 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				CED4872317DB1BF6007FCF57 /* TraccarClient-Info.plist */,
+				CED4872917DB1BF6007FCF57 /* TraccarClient-Prefix.pch */,
+				CBCE82F01B8D265800A7318B /* TraccarClient.xcdatamodeld */,
+				CED4879A17DB1E61007FCF57 /* InAppSettings.bundle */,
+			);
+			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		58B511DA1A9E6C8500147676 /* Traccar */ = {
+		CED4871717DB1BF6007FCF57 /* TraccarClient */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 58B511EF1A9E6C8500147676 /* Build configuration list for PBXNativeTarget "Traccar" */;
+			buildConfigurationList = CED4873E17DB1BF6007FCF57 /* Build configuration list for PBXNativeTarget "TraccarClient" */;
 			buildPhases = (
-				58B511D71A9E6C8500147676 /* Sources */,
-				58B511D81A9E6C8500147676 /* Frameworks */,
-				58B511D91A9E6C8500147676 /* CopyFiles */,
+				336312383EBA2CE76A62BF07 /* [CP] Check Pods Manifest.lock */,
+				CED4871417DB1BF6007FCF57 /* Sources */,
+				CED4871517DB1BF6007FCF57 /* Frameworks */,
+				CED4871617DB1BF6007FCF57 /* Resources */,
+				5E3175221F692FA600CDF0F5 /* ShellScript */,
+				CEFA94EF1EA2EE31009B5809 /* Embed Frameworks */,
+				CE53D381166346161DE11133 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = Traccar;
-			productName = RCTDataManager;
-			productReference = 134814201AA4EA6300B7C361 /* libTraccar.a */;
-			productType = "com.apple.product-type.library.static";
+			name = TraccarClient;
+			packageProductDependencies = (
+				5EE3CA332998948F002C86E4 /* FirebaseAnalytics */,
+				5EE3CA352998948F002C86E4 /* FirebaseCrashlytics */,
+				5EE3CA38299894B9002C86E4 /* InAppSettingsKit */,
+			);
+			productName = TraccarClient;
+			productReference = CED4871817DB1BF6007FCF57 /* TraccarClient.app */;
+			productType = "com.apple.product-type.application";
+		};
+		CEE286CD1B80839600AE7E83 /* TraccarClientTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CEE286D61B80839700AE7E83 /* Build configuration list for PBXNativeTarget "TraccarClientTests" */;
+			buildPhases = (
+				77A6686AA319ECBE6BFAE791 /* [CP] Check Pods Manifest.lock */,
+				CEE286CA1B80839600AE7E83 /* Sources */,
+				CEE286CB1B80839600AE7E83 /* Frameworks */,
+				CEE286CC1B80839600AE7E83 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CEE286D51B80839700AE7E83 /* PBXTargetDependency */,
+			);
+			name = TraccarClientTests;
+			productName = TraccarClientTests;
+			productReference = CEE286CE1B80839700AE7E83 /* TraccarClientTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		58B511D31A9E6C8500147676 /* Project object */ = {
+		CED4871017DB1BF6007FCF57 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0920;
-				ORGANIZATIONNAME = Facebook;
+				LastUpgradeCheck = 1200;
+				ORGANIZATIONNAME = Traccar;
 				TargetAttributes = {
-					58B511DA1A9E6C8500147676 = {
-						CreatedOnToolsVersion = 6.1.1;
+					CED4871717DB1BF6007FCF57 = {
+						DevelopmentTeam = YW49KTJKFW;
+						LastSwiftMigration = 1100;
+					};
+					CEE286CD1B80839600AE7E83 = {
+						CreatedOnToolsVersion = 6.4;
+						LastSwiftMigration = 1100;
+						TestTargetID = CED4871717DB1BF6007FCF57;
 					};
 				};
 			};
-			buildConfigurationList = 58B511D61A9E6C8500147676 /* Build configuration list for PBXProject "Traccar" */;
+			buildConfigurationList = CED4871317DB1BF6007FCF57 /* Build configuration list for PBXProject "Traccar" */;
 			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
-				English,
 				en,
+				Base,
+				de,
+				es,
+				fr,
+				pt,
+				ru,
+				"pt-BR",
+				it,
+				pl,
+				nl,
+				zh,
+				ko,
+				ja,
 			);
-			mainGroup = 58B511D21A9E6C8500147676;
-			productRefGroup = 58B511D21A9E6C8500147676;
+			mainGroup = CED4870F17DB1BF6007FCF57;
+			packageReferences = (
+				5EE3CA322998948F002C86E4 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				5EE3CA37299894B9002C86E4 /* XCRemoteSwiftPackageReference "InAppSettingsKit" */,
+			);
+			productRefGroup = CED4871917DB1BF6007FCF57 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				58B511DA1A9E6C8500147676 /* Traccar */,
+				CED4871717DB1BF6007FCF57 /* TraccarClient */,
+				CEE286CD1B80839600AE7E83 /* TraccarClientTests */,
 			);
 		};
 /* End PBXProject section */
 
+/* Begin PBXResourcesBuildPhase section */
+		CED4871617DB1BF6007FCF57 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CEF6433C1B91AA9400195CEA /* MainStoryboard.storyboard in Resources */,
+				CEF6433D1B91AA9400195CEA /* Localizable.strings in Resources */,
+				CE5899C81B115C9100ED70D2 /* Images.xcassets in Resources */,
+				CEF643271B919FFA00195CEA /* LaunchScreen.xib in Resources */,
+				CED4879B17DB1E61007FCF57 /* InAppSettings.bundle in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CEE286CC1B80839600AE7E83 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		336312383EBA2CE76A62BF07 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TraccarClient-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5E3175221F692FA600CDF0F5 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${DWARF_DSYM_FOLDER_PATH}/${DWARF_DSYM_FILE_NAME}/Contents/Resources/DWARF/${TARGET_NAME}",
+				"$(SRCROOT)/$(BUILT_PRODUCTS_DIR)/$(INFOPLIST_PATH)",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if [ \"${CONFIGURATION}\" = \"Google\" ]; then\ncp -r \"${PROJECT_DIR}/../environment/google-services/traccar-client-ios.plist\" \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.app/GoogleService-Info.plist\"\n\"${BUILD_DIR%/Build/*}/SourcePackages/checkouts/firebase-ios-sdk/Crashlytics/run\"\nfi\n";
+		};
+		77A6686AA319ECBE6BFAE791 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TraccarClientTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CE53D381166346161DE11133 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TraccarClient/Pods-TraccarClient-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/DoubleConversion/DoubleConversion.framework",
+				"${BUILT_PRODUCTS_DIR}/RCT-Folly/folly.framework",
+				"${BUILT_PRODUCTS_DIR}/RCTTypeSafety/RCTTypeSafety.framework",
+				"${BUILT_PRODUCTS_DIR}/React-Codegen/React_Codegen.framework",
+				"${BUILT_PRODUCTS_DIR}/React-Core/React.framework",
+				"${BUILT_PRODUCTS_DIR}/React-CoreModules/CoreModules.framework",
+				"${BUILT_PRODUCTS_DIR}/React-NativeModulesApple/React_NativeModulesApple.framework",
+				"${BUILT_PRODUCTS_DIR}/React-RCTAnimation/RCTAnimation.framework",
+				"${BUILT_PRODUCTS_DIR}/React-RCTAppDelegate/React_RCTAppDelegate.framework",
+				"${BUILT_PRODUCTS_DIR}/React-RCTBlob/RCTBlob.framework",
+				"${BUILT_PRODUCTS_DIR}/React-RCTImage/RCTImage.framework",
+				"${BUILT_PRODUCTS_DIR}/React-RCTLinking/RCTLinking.framework",
+				"${BUILT_PRODUCTS_DIR}/React-RCTNetwork/RCTNetwork.framework",
+				"${BUILT_PRODUCTS_DIR}/React-RCTSettings/RCTSettings.framework",
+				"${BUILT_PRODUCTS_DIR}/React-RCTText/RCTText.framework",
+				"${BUILT_PRODUCTS_DIR}/React-RCTVibration/RCTVibration.framework",
+				"${BUILT_PRODUCTS_DIR}/React-cxxreact/cxxreact.framework",
+				"${BUILT_PRODUCTS_DIR}/React-debug/React_debug.framework",
+				"${BUILT_PRODUCTS_DIR}/React-hermes/reacthermes.framework",
+				"${BUILT_PRODUCTS_DIR}/React-jsi/jsi.framework",
+				"${BUILT_PRODUCTS_DIR}/React-jsiexecutor/jsireact.framework",
+				"${BUILT_PRODUCTS_DIR}/React-jsinspector/jsinspector.framework",
+				"${BUILT_PRODUCTS_DIR}/React-logger/logger.framework",
+				"${BUILT_PRODUCTS_DIR}/React-perflogger/reactperflogger.framework",
+				"${BUILT_PRODUCTS_DIR}/React-runtimescheduler/React_runtimescheduler.framework",
+				"${BUILT_PRODUCTS_DIR}/React-utils/React_utils.framework",
+				"${BUILT_PRODUCTS_DIR}/ReactCommon/ReactCommon.framework",
+				"${BUILT_PRODUCTS_DIR}/SocketRocket/SocketRocket.framework",
+				"${BUILT_PRODUCTS_DIR}/Yoga/yoga.framework",
+				"${BUILT_PRODUCTS_DIR}/fmt/fmt.framework",
+				"${BUILT_PRODUCTS_DIR}/glog/glog.framework",
+				"${BUILT_PRODUCTS_DIR}/libevent/libevent.framework",
+				"${PODS_XCFRAMEWORKS_BUILD_DIR}/hermes-engine/Pre-built/hermes.framework/hermes",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DoubleConversion.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/folly.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RCTTypeSafety.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/React_Codegen.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/React.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CoreModules.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/React_NativeModulesApple.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RCTAnimation.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/React_RCTAppDelegate.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RCTBlob.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RCTImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RCTLinking.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RCTNetwork.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RCTSettings.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RCTText.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RCTVibration.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/cxxreact.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/React_debug.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/reacthermes.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/jsi.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/jsireact.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/jsinspector.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/logger.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/reactperflogger.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/React_runtimescheduler.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/React_utils.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReactCommon.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SocketRocket.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/yoga.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/fmt.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/glog.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/libevent.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/hermes.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TraccarClient/Pods-TraccarClient-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
-		58B511D71A9E6C8500147676 /* Sources */ = {
+		CED4871417DB1BF6007FCF57 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F4FF95D7245B92E800C19C63 /* Traccar.swift in Sources */,
-				B3E7B58A1CC2AC0600A0062D /* Traccar.mm in Sources */,
+				CB7ED0801F6602CD00A33FCF /* Position.swift in Sources */,
+				CBAA0F7F1F68E807008BBBBE /* MainViewController.swift in Sources */,
+				CB7ED0821F661B4F00A33FCF /* PositionProvider.swift in Sources */,
+				CB4197991F67724F008F301C /* NetworkManager.swift in Sources */,
+				CB7ED0841F662BAF00A33FCF /* AppDelegate.swift in Sources */,
+				5E394EBE28A9CC7600396F33 /* BatteryStatus.swift in Sources */,
+				2767329B2A60AB14006EDA2A /* Traccar.swift in Sources */,
+				5E716A2B1F63A60800A2DBC3 /* ProtocolFormatter.swift in Sources */,
+				CBCE82F21B8D265800A7318B /* TraccarClient.xcdatamodeld in Sources */,
+				CBAA0F7D1F68E14C008BBBBE /* StatusViewController.swift in Sources */,
+				2767329C2A60AB14006EDA2A /* Traccar.mm in Sources */,
+				CBAA0F811F68EB62008BBBBE /* TrackingController.swift in Sources */,
+				5E716A271F63A0B100A2DBC3 /* DistanceCalculator.swift in Sources */,
+				5E716A291F63A45A00A2DBC3 /* RequestManager.swift in Sources */,
+				CB4197931F674A3E008F301C /* DatabaseHelper.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CEE286CA1B80839600AE7E83 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		CEE286D51B80839700AE7E83 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CED4871717DB1BF6007FCF57 /* TraccarClient */;
+			targetProxy = CEE286D41B80839700AE7E83 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		CED4873317DB1BF6007FCF57 /* MainStoryboard.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CEF254DD1B905266001DEFD2 /* ru */,
+				CEF254DF1B9052EB001DEFD2 /* Base */,
+				CEF6432A1B91A48B00195CEA /* de */,
+				CEF6432C1B91A49400195CEA /* es */,
+				CEF6432E1B91A49700195CEA /* fr */,
+				CEF643321B91A4BF00195CEA /* pt */,
+				CE2FA5181CB935C9007F86B4 /* en */,
+				CE4B80FE1EC71CAE00D1C41D /* pt-BR */,
+				CE4B81001EC71CCF00D1C41D /* it */,
+				CE4B81021EC71CFF00D1C41D /* pl */,
+				CE4B81041EC71D1700D1C41D /* nl */,
+				CE4B81061EC71D3600D1C41D /* zh */,
+				CE4B81081EC71D4300D1C41D /* ko */,
+				CE4B810A1EC71D4800D1C41D /* ja */,
+			);
+			name = MainStoryboard.storyboard;
+			sourceTree = "<group>";
+		};
+		CEF643371B91A94600195CEA /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CEF643361B91A94600195CEA /* Base */,
+				CEF643381B91A95700195CEA /* de */,
+				CEF643391B91A98300195CEA /* ru */,
+				CEECE4B91B91AE2B00EB6F4A /* es */,
+				CEECE4BA1B91AE2C00EB6F4A /* fr */,
+				CEECE4BB1B91AE2D00EB6F4A /* pt */,
+				CE4B80FF1EC71CAE00D1C41D /* pt-BR */,
+				CE4B81011EC71CCF00D1C41D /* it */,
+				CE4B81031EC71CFF00D1C41D /* pl */,
+				CE4B81051EC71D1700D1C41D /* nl */,
+				CE4B81071EC71D3600D1C41D /* zh */,
+				CE4B81091EC71D4300D1C41D /* ko */,
+				CE4B810B1EC71D4800D1C41D /* ja */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
 /* Begin XCBuildConfiguration section */
-		58B511ED1A9E6C8500147676 /* Debug */ = {
+		5E3175231F69305200CDF0F5 /* Google */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				DEFINES_MODULE = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Google;
+		};
+		5E3175241F69305200CDF0F5 /* Google */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 81AC353AE5F096BE743EDB61 /* Pods-TraccarClient.google.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 58;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = YW49KTJKFW;
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "TraccarClient/TraccarClient-Prefix.pch";
+				INFOPLIST_FILE = "TraccarClient/TraccarClient-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 7.0;
+				OTHER_SWIFT_FLAGS = "-D FIREBASE";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.traccar.client.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "Traccar-Bridging-Header.h";
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 5.0;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Google;
+		};
+		5E3175251F69305200CDF0F5 /* Google */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5C66AFDC1E83BBCC7E6D8A83 /* Pods-TraccarClientTests.google.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				INFOPLIST_FILE = TraccarClientTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = "org.traccar.client.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TraccarClient.app/TraccarClient";
+			};
+			name = Google;
+		};
+		CED4873C17DB1BF6007FCF57 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEFINES_MODULE = YES;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
-				"EXCLUDED_ARCHS[sdk=*]" = arm64;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -163,121 +762,293 @@
 				);
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				MTL_ENABLE_DEBUG_INFO = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
-		58B511EE1A9E6C8500147676 /* Release */ = {
+		CED4873D17DB1BF6007FCF57 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
+				DEFINES_MODULE = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CED4873F17DB1BF6007FCF57 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9B6B6990BE3774CFE5CE3A6F /* Pods-TraccarClient.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 58;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = YW49KTJKFW;
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "TraccarClient/TraccarClient-Prefix.pch";
+				INFOPLIST_FILE = "TraccarClient/TraccarClient-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 7.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "org.traccar.client.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "Traccar-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 5.0;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		CED4874017DB1BF6007FCF57 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B03FE537774EB780548721DA /* Pods-TraccarClient.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 58;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = YW49KTJKFW;
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "TraccarClient/TraccarClient-Prefix.pch";
+				INFOPLIST_FILE = "TraccarClient/TraccarClient-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 7.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "org.traccar.client.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "Traccar-Bridging-Header.h";
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 5.0;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		CEE286D71B80839700AE7E83 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4C3194FDD9E4FCFD01503197 /* Pods-TraccarClientTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				INFOPLIST_FILE = TraccarClientTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "org.traccar.client.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TraccarClient.app/TraccarClient";
+			};
+			name = Debug;
+		};
+		CEE286D81B80839700AE7E83 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C90EDD4B96782335DF134ABF /* Pods-TraccarClientTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				"EXCLUDED_ARCHS[sdk=*]" = arm64;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				INFOPLIST_FILE = TraccarClientTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MTL_ENABLE_DEBUG_INFO = NO;
-				SDKROOT = iphoneos;
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		58B511F01A9E6C8500147676 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				HEADER_SEARCH_PATHS = (
-					"$(inherited)",
-					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
-					"$(SRCROOT)/../../../React/**",
-					"$(SRCROOT)/../../react-native/React/**",
-				);
-				LIBRARY_SEARCH_PATHS = "$(inherited)";
-				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_NAME = Traccar;
-				SKIP_INSTALL = YES;
-				SWIFT_OBJC_BRIDGING_HEADER = "Traccar-Bridging-Header.h";
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.traccar.client.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
 				SWIFT_VERSION = 5.0;
-			};
-			name = Debug;
-		};
-		58B511F11A9E6C8500147676 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				HEADER_SEARCH_PATHS = (
-					"$(inherited)",
-					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
-					"$(SRCROOT)/../../../React/**",
-					"$(SRCROOT)/../../react-native/React/**",
-				);
-				LIBRARY_SEARCH_PATHS = "$(inherited)";
-				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_NAME = Traccar;
-				SKIP_INSTALL = YES;
-				SWIFT_OBJC_BRIDGING_HEADER = "Traccar-Bridging-Header.h";
-				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TraccarClient.app/TraccarClient";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		58B511D61A9E6C8500147676 /* Build configuration list for PBXProject "Traccar" */ = {
+		CED4871317DB1BF6007FCF57 /* Build configuration list for PBXProject "Traccar" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				58B511ED1A9E6C8500147676 /* Debug */,
-				58B511EE1A9E6C8500147676 /* Release */,
+				CED4873C17DB1BF6007FCF57 /* Debug */,
+				CED4873D17DB1BF6007FCF57 /* Release */,
+				5E3175231F69305200CDF0F5 /* Google */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		58B511EF1A9E6C8500147676 /* Build configuration list for PBXNativeTarget "Traccar" */ = {
+		CED4873E17DB1BF6007FCF57 /* Build configuration list for PBXNativeTarget "TraccarClient" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				58B511F01A9E6C8500147676 /* Debug */,
-				58B511F11A9E6C8500147676 /* Release */,
+				CED4873F17DB1BF6007FCF57 /* Debug */,
+				CED4874017DB1BF6007FCF57 /* Release */,
+				5E3175241F69305200CDF0F5 /* Google */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CEE286D61B80839700AE7E83 /* Build configuration list for PBXNativeTarget "TraccarClientTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CEE286D71B80839700AE7E83 /* Debug */,
+				CEE286D81B80839700AE7E83 /* Release */,
+				5E3175251F69305200CDF0F5 /* Google */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		5EE3CA322998948F002C86E4 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 9.0.0;
+			};
+		};
+		5EE3CA37299894B9002C86E4 /* XCRemoteSwiftPackageReference "InAppSettingsKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/futuretap/InAppSettingsKit.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		5EE3CA332998948F002C86E4 /* FirebaseAnalytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5EE3CA322998948F002C86E4 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalytics;
+		};
+		5EE3CA352998948F002C86E4 /* FirebaseCrashlytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5EE3CA322998948F002C86E4 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseCrashlytics;
+		};
+		5EE3CA38299894B9002C86E4 /* InAppSettingsKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5EE3CA37299894B9002C86E4 /* XCRemoteSwiftPackageReference "InAppSettingsKit" */;
+			productName = InAppSettingsKit;
+		};
+/* End XCSwiftPackageProductDependency section */
+
+/* Begin XCVersionGroup section */
+		CBCE82F01B8D265800A7318B /* TraccarClient.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				CBCE82F11B8D265800A7318B /* TraccarClient.xcdatamodel */,
+			);
+			currentVersion = CBCE82F11B8D265800A7318B /* TraccarClient.xcdatamodel */;
+			path = TraccarClient.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
-	rootObject = 58B511D31A9E6C8500147676 /* Project object */;
+	rootObject = CED4871017DB1BF6007FCF57 /* Project object */;
 }
