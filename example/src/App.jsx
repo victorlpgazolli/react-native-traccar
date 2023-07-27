@@ -5,7 +5,7 @@ import Traccar from 'react-native-traccar';
 
 export default function App() {
 
-
+  console.log(NativeModules?.Traccar);
   const startTrackingService = () => {
     PermissionsAndroid.request(
       PermissionsAndroid.PERMISSIONS.ACCESS_FINE_LOCATION,

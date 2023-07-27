@@ -1,0 +1,10 @@
+"Service status" = "定位";
+"Device identifier" = "设备编码";
+"Server URL" = "服务器地址";
+"Location accuracy" = "位置精度";
+"High" = "高";
+"Medium" = "中";
+"Low" = "低";
+"Frequency" = "定位频率（秒）";
+"Distance" = "距离";
+"Angle" = "角度";
