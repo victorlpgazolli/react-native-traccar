@@ -17,10 +17,12 @@
 import UIKit
 import CoreData
 import Firebase
+import Foundation
+import UIKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate, PositionProviderDelegate {
-    
+    var bridge: RCTBridge!
     var window: UIWindow?
     
     var managedObjectContext: NSManagedObjectContext?
@@ -35,38 +37,49 @@ class AppDelegate: UIResponder, UIApplicationDelegate, PositionProviderDelegate 
     }
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]?) -> Bool {
-        #if FIREBASE
-        FirebaseApp.configure()
-        #endif
+        // #if FIREBASE
+        // FirebaseApp.configure()
+        // #endif
 
-        UIDevice.current.isBatteryMonitoringEnabled = true
+        // UIDevice.current.isBatteryMonitoringEnabled = true
 
-        let userDefaults = UserDefaults.standard
-        if userDefaults.string(forKey: "device_id_preference") == nil {
-            let identifier = "\(Int.random(in: 100000..<1000000))"
-            userDefaults.setValue(identifier, forKey: "device_id_preference")
-        }
+        // let userDefaults = UserDefaults.standard
+        // if userDefaults.string(forKey: "device_id_preference") == nil {
+        //     let identifier = "\(Int.random(in: 100000..<1000000))"
+        //     userDefaults.setValue(identifier, forKey: "device_id_preference")
+        // }
 
-        registerDefaultsFromSettingsBundle()
+        // registerDefaultsFromSettingsBundle()
         
-        migrateLegacyDefaults()
+        // migrateLegacyDefaults()
         
-        let modelUrl = Bundle.main.url(forResource: "TraccarClient", withExtension: "momd")
-        managedObjectModel = NSManagedObjectModel(contentsOf: modelUrl!)
+        // let modelUrl = Bundle.main.url(forResource: "TraccarClient", withExtension: "momd")
+        // managedObjectModel = NSManagedObjectModel(contentsOf: modelUrl!)
         
-        persistentStoreCoordinator = NSPersistentStoreCoordinator(managedObjectModel: managedObjectModel!)
-        let storeUrl = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).last?.appendingPathComponent("TraccarClient.sqlite")
-        let options = [NSMigratePersistentStoresAutomaticallyOption: true, NSInferMappingModelAutomaticallyOption: true]
-        try! persistentStoreCoordinator?.addPersistentStore(ofType: NSSQLiteStoreType, configurationName: nil, at: storeUrl, options: options)
+        // persistentStoreCoordinator = NSPersistentStoreCoordinator(managedObjectModel: managedObjectModel!)
+        // let storeUrl = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).last?.appendingPathComponent("TraccarClient.sqlite")
+        // let options = [NSMigratePersistentStoresAutomaticallyOption: true, NSInferMappingModelAutomaticallyOption: true]
+        // try! persistentStoreCoordinator?.addPersistentStore(ofType: NSSQLiteStoreType, configurationName: nil, at: storeUrl, options: options)
         
-        managedObjectContext = NSManagedObjectContext.init(concurrencyType: .mainQueueConcurrencyType)
-        managedObjectContext?.persistentStoreCoordinator = persistentStoreCoordinator
+        // managedObjectContext = NSManagedObjectContext.init(concurrencyType: .mainQueueConcurrencyType)
+        // managedObjectContext?.persistentStoreCoordinator = persistentStoreCoordinator
 
-        if userDefaults.bool(forKey: "service_status_preference") {
-            StatusViewController.addMessage(NSLocalizedString("Service created", comment: ""))
-            trackingController = TrackingController()
-            trackingController?.start()
-        }
+        // if userDefaults.bool(forKey: "service_status_preference") {
+        //     StatusViewController.addMessage(NSLocalizedString("Service created", comment: ""))
+        //     trackingController = TrackingController()
+        //     trackingController?.start()
+        // }
+
+        let jsCodeLocation: URL
+
+        jsCodeLocation = RCTBundleURLProvider.sharedSettings().jsBundleURL(forBundleRoot: "index")
+        let rootView = RCTRootView(bundleURL: jsCodeLocation, moduleName: "TraccarExample", initialProperties: nil, launchOptions: launchOptions)
+        let rootViewController = UIViewController()
+        rootViewController.view = rootView
+
+        self.window = UIWindow(frame: UIScreen.main.bounds)
+        self.window?.rootViewController = rootViewController
+        self.window?.makeKeyAndVisible()
 
         return true
     }
