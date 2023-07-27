@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		274B39C42A73334E0064FD96 /* TraccarModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 274B39C32A73334E0064FD96 /* TraccarModule.m */; };
+		274B39C62A7334110064FD96 /* TraccarModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 274B39C52A7334110064FD96 /* TraccarModule.swift */; };
 		52F7B10AAFD20E2DF4CFB5E3 /* libPods-TraccarClient.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F0BD8B7DB8783954478AEDA /* libPods-TraccarClient.a */; };
 		5E394EBE28A9CC7600396F33 /* BatteryStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E394EBD28A9CC7600396F33 /* BatteryStatus.swift */; };
 		5E716A271F63A0B100A2DBC3 /* DistanceCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E716A261F63A0B100A2DBC3 /* DistanceCalculator.swift */; };
@@ -68,6 +70,9 @@
 
 /* Begin PBXFileReference section */
 		274B39B92A732D030064FD96 /* TraccarClient-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TraccarClient-Bridging-Header.h"; sourceTree = "<group>"; };
+		274B39C22A73330D0064FD96 /* TraccarModule.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TraccarModule.h; sourceTree = "<group>"; };
+		274B39C32A73334E0064FD96 /* TraccarModule.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TraccarModule.m; sourceTree = "<group>"; };
+		274B39C52A7334110064FD96 /* TraccarModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TraccarModule.swift; sourceTree = "<group>"; };
 		3055560DEAD5E2E70C7CD7F0 /* Pods-TraccarClient.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TraccarClient.release.xcconfig"; path = "Target Support Files/Pods-TraccarClient/Pods-TraccarClient.release.xcconfig"; sourceTree = "<group>"; };
 		3CD94570628C6837A15A6791 /* Pods-TraccarClient.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TraccarClient.debug.xcconfig"; path = "Target Support Files/Pods-TraccarClient/Pods-TraccarClient.debug.xcconfig"; sourceTree = "<group>"; };
 		54684A705178E0A65BD0DC40 /* Pods-TraccarClient-TraccarClientTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TraccarClient-TraccarClientTests.debug.xcconfig"; path = "Target Support Files/Pods-TraccarClient-TraccarClientTests/Pods-TraccarClient-TraccarClientTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -232,6 +237,9 @@
 				CB4197981F67724F008F301C /* NetworkManager.swift */,
 				CB7ED07F1F6602CD00A33FCF /* Position.swift */,
 				5E394EBD28A9CC7600396F33 /* BatteryStatus.swift */,
+				274B39C22A73330D0064FD96 /* TraccarModule.h */,
+				274B39C32A73334E0064FD96 /* TraccarModule.m */,
+				274B39C52A7334110064FD96 /* TraccarModule.swift */,
 				CB7ED0811F661B4F00A33FCF /* PositionProvider.swift */,
 				5E716A2A1F63A60800A2DBC3 /* ProtocolFormatter.swift */,
 				5E716A281F63A45A00A2DBC3 /* RequestManager.swift */,
@@ -551,6 +559,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				274B39C42A73334E0064FD96 /* TraccarModule.m in Sources */,
 				CB7ED0801F6602CD00A33FCF /* Position.swift in Sources */,
 				CBAA0F7F1F68E807008BBBBE /* MainViewController.swift in Sources */,
 				CB7ED0821F661B4F00A33FCF /* PositionProvider.swift in Sources */,
@@ -564,6 +573,7 @@
 				5E716A271F63A0B100A2DBC3 /* DistanceCalculator.swift in Sources */,
 				5E716A291F63A45A00A2DBC3 /* RequestManager.swift in Sources */,
 				CB4197931F674A3E008F301C /* DatabaseHelper.swift in Sources */,
+				274B39C62A7334110064FD96 /* TraccarModule.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -874,6 +884,7 @@
 				CURRENT_PROJECT_VERSION = 58;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = YW49KTJKFW;
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = i386;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TraccarClient/TraccarClient-Prefix.pch";
@@ -885,6 +896,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.traccar.client.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";

@@ -5,24 +5,25 @@ import Traccar from 'react-native-traccar';
 
 export default function App() {
 
-  console.log(NativeModules?.Traccar);
+  console.log(NativeModules?.TraccarModule);
   const startTrackingService = () => {
-    PermissionsAndroid.request(
-      PermissionsAndroid.PERMISSIONS.ACCESS_FINE_LOCATION,
-      {
-        title: 'Location Access Required',
-        message: 'This App needs to Access your location',
-      },
-    ).then(granted => {
-      if (granted === PermissionsAndroid.RESULTS.GRANTED) {
-        NativeModules?.Traccar.startTrackingService()
-      } else {
-        alert('Location permission denied');
-      }
-    });
+    NativeModules?.TraccarModule.startTrackingService()
+    // PermissionsAndroid.request(
+    //   PermissionsAndroid.PERMISSIONS.ACCESS_FINE_LOCATION,
+    //   {
+    //     title: 'Location Access Required',
+    //     message: 'This App needs to Access your location',
+    //   },
+    // ).then(granted => {
+    //   if (granted === PermissionsAndroid.RESULTS.GRANTED) {
+    //     NativeModules?.Traccar.startTrackingService()
+    //   } else {
+    //     alert('Location permission denied');
+    //   }
+    // });
   }
   const stopTrackingService = () => {
-    NativeModules?.Traccar.stopTrackingService()
+    NativeModules?.TraccarModule.stopTrackingService()
   }
 
   return (
