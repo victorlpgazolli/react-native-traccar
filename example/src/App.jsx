@@ -1,13 +1,18 @@
 import * as React from 'react';
 
-import { StyleSheet, View, NativeModules, TouchableOpacity, Text, PermissionsAndroid } from 'react-native';
+import { StyleSheet, View, NativeModules, TouchableOpacity, Text, PermissionsAndroid, Platform } from 'react-native';
 import Traccar from 'react-native-traccar';
 
 export default function App() {
 
-  console.log(NativeModules?.TraccarModule);
-  const startTrackingService = () => {
-    NativeModules?.TraccarModule.startTrackingService()
+  const startTrackingService = async () => {
+    // await requestMultiple([
+    //   Platform.select({
+    //     android: PERMISSIONS.ANDROID.ACCESS_FINE_LOCATION,
+    //     ios: PERMISSIONS.IOS.LOCATION_ALWAYS,
+    //   })
+    // ]);
+    Traccar.startTrackingService()
     // PermissionsAndroid.request(
     //   PermissionsAndroid.PERMISSIONS.ACCESS_FINE_LOCATION,
     //   {
@@ -23,7 +28,7 @@ export default function App() {
     // });
   }
   const stopTrackingService = () => {
-    NativeModules?.TraccarModule.stopTrackingService()
+    Traccar.stopTrackingService()
   }
 
   return (

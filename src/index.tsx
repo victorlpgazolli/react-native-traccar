@@ -5,9 +5,12 @@ const LINKING_ERROR =
   Platform.select({ ios: "- You have run 'pod install'\n", default: '' }) +
   '- You rebuilt the app after installing the package\n' +
   '- You are not using Expo Go\n';
-
-const Traccar = NativeModules.Traccar
-  ? NativeModules.Traccar
+const Module = Platform.select({
+  ios: NativeModules.TraccarModule,
+  android: NativeModules.Traccar,
+})
+const Traccar = Module
+  ? Module
   : new Proxy(
       {},
       {
@@ -17,6 +20,11 @@ const Traccar = NativeModules.Traccar
       }
     );
 
-export function multiply(a: number, b: number): Promise<number> {
-  return Traccar.multiply(a, b);
+export function startTrackingService(): void {
+  return Traccar.startTrackingService();
 }
+
+export function stopTrackingService(): void {
+  return Traccar.stopTrackingService();
+}
+
