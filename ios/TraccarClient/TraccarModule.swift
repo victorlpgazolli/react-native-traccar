@@ -7,12 +7,12 @@
 //
 
 import Foundation
-@objc(GetDetails)
+@objc(TraccarModule)
 class TraccarModule: NSObject {
 
     var trackingController: TrackingController?
 
-    @objc(startTrackingService)
+    @objc
     func startTrackingService() {
         // userDefaults.setValue(true, forKey: "service_status_preference")
         // StatusViewController.addMessage(NSLocalizedString("Service created", comment: ""))
@@ -21,7 +21,7 @@ class TraccarModule: NSObject {
         // showToast(message: NSLocalizedString("Service created", comment: ""))
     }
     
-    @objc(stopTrackingService)
+    @objc
     func stopTrackingService() {
         // userDefaults.setValue(false, forKey: "service_status_preference")
         // StatusViewController.addMessage(NSLocalizedString("Service destroyed", comment: ""))

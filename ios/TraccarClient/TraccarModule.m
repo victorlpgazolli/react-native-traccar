@@ -8,21 +8,15 @@
 
 #import <Foundation/Foundation.h>
 #import <React/RCTBridgeModule.h>
-#import "TraccarModule.h"
 
 //@interface RCT_EXTERN_MODULE(TraccarModule, NSObject);
 
-
-@implementation TraccarModule
-
-
-RCT_EXPORT_MODULE();
+@interface RCT_EXTERN_MODULE(TraccarModule, NSObject)
 
 +(BOOL)requiresMainQueueSetup
 {
     return YES;
 }
-// method to export
 RCT_EXTERN_METHOD(startTrackingService);
 RCT_EXTERN_METHOD(stopTrackingService);
 
