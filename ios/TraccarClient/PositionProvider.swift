@@ -36,11 +36,11 @@ class PositionProvider: NSObject, CLLocationManagerDelegate {
     var pendingStart = false
     
     override init() {
-        let userDefaults = UserDefaults.standard
-        deviceId = userDefaults.string(forKey: "device_id_preference")!
-        interval = userDefaults.double(forKey: "frequency_preference")
-        distance = userDefaults.double(forKey: "distance_preference")
-        angle = userDefaults.double(forKey: "angle_preference")
+        // let userDefaults = UserDefaults.standard
+        deviceId = AppDelegate.instance.deviceId
+        interval = AppDelegate.instance.interval
+        distance = AppDelegate.instance.distance //userDefaults.double(forKey: "distance_preference")
+        angle = AppDelegate.instance.angle// userDefaults.double(forKey: "angle_preference")
 
         locationManager = CLLocationManager()
         
@@ -50,7 +50,7 @@ class PositionProvider: NSObject, CLLocationManagerDelegate {
 
         locationManager.pausesLocationUpdatesAutomatically = false
         
-        switch userDefaults.string(forKey: "accuracy_preference") ?? "medium" {
+        switch AppDelegate.instance.accuracy ?? "medium" {
         case "high":
             locationManager.desiredAccuracy = kCLLocationAccuracyBest
         case "low":
@@ -91,6 +91,7 @@ class PositionProvider: NSObject, CLLocationManagerDelegate {
     }
     
     func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
+        print("Traccar: PositionProvider.locationManager didChangeAuthorization")
         switch status {
         case .authorizedAlways, .authorizedWhenInUse:
             if pendingStart {
@@ -103,6 +104,7 @@ class PositionProvider: NSObject, CLLocationManagerDelegate {
     }
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        print("Traccar: PositionProvider.locationManager didUpdateLocations")
         if let location = locations.last {
             if lastLocation == nil
                 || location.timestamp.timeIntervalSince(lastLocation!.timestamp) >= interval

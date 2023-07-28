@@ -30,6 +30,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate, PositionProviderDelegate 
     var persistentStoreCoordinator: NSPersistentStoreCoordinator?
     
     var trackingController: TrackingController?
+    var apiURL: String = "https://traccar.org"
+    var frequency: Int = 1000
+    var interval: Double = 1000
+    var distance: Double = 5
+    var angle: Double = 45.0
+    var deviceId: String = "1234567890"
+    var accuracy: String = "high"
+    var buffer_preference: Bool = true
     var positionProvider: PositionProvider?
     
     static var instance: AppDelegate {
@@ -53,16 +61,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate, PositionProviderDelegate 
         
         // migrateLegacyDefaults()
         
-        // let modelUrl = Bundle.main.url(forResource: "TraccarClient", withExtension: "momd")
-        // managedObjectModel = NSManagedObjectModel(contentsOf: modelUrl!)
+        let modelUrl = Bundle.main.url(forResource: "TraccarClient", withExtension: "momd")
+        managedObjectModel = NSManagedObjectModel(contentsOf: modelUrl!)
         
-        // persistentStoreCoordinator = NSPersistentStoreCoordinator(managedObjectModel: managedObjectModel!)
-        // let storeUrl = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).last?.appendingPathComponent("TraccarClient.sqlite")
-        // let options = [NSMigratePersistentStoresAutomaticallyOption: true, NSInferMappingModelAutomaticallyOption: true]
-        // try! persistentStoreCoordinator?.addPersistentStore(ofType: NSSQLiteStoreType, configurationName: nil, at: storeUrl, options: options)
+        persistentStoreCoordinator = NSPersistentStoreCoordinator(managedObjectModel: managedObjectModel!)
+        let storeUrl = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).last?.appendingPathComponent("TraccarClient.sqlite")
+        let options = [NSMigratePersistentStoresAutomaticallyOption: true, NSInferMappingModelAutomaticallyOption: true]
+        try! persistentStoreCoordinator?.addPersistentStore(ofType: NSSQLiteStoreType, configurationName: nil, at: storeUrl, options: options)
         
-        // managedObjectContext = NSManagedObjectContext.init(concurrencyType: .mainQueueConcurrencyType)
-        // managedObjectContext?.persistentStoreCoordinator = persistentStoreCoordinator
+         managedObjectContext = NSManagedObjectContext.init(concurrencyType: .mainQueueConcurrencyType)
+        managedObjectContext?.persistentStoreCoordinator = persistentStoreCoordinator
 
         // if userDefaults.bool(forKey: "service_status_preference") {
         //     StatusViewController.addMessage(NSLocalizedString("Service created", comment: ""))
@@ -86,34 +94,34 @@ class AppDelegate: UIResponder, UIApplicationDelegate, PositionProviderDelegate 
     
     func application(_ application: UIApplication, performActionFor shortcutItem: UIApplicationShortcutItem, completionHandler: @escaping (Bool) -> Void) {
         
-        let userDefaults = UserDefaults.standard
+        // let userDefaults = UserDefaults.standard
         
-        switch shortcutItem.type {
-        case "org.traccar.client.start":
-            if !userDefaults.bool(forKey: "service_status_preference") {
-                userDefaults.setValue(true, forKey: "service_status_preference")
-                StatusViewController.addMessage(NSLocalizedString("Service created", comment: ""))
-                trackingController = TrackingController()
-                trackingController?.start()
-                showToast(message: NSLocalizedString("Service created", comment: ""))
-            }
-        case "org.traccar.client.stop":
-            if userDefaults.bool(forKey: "service_status_preference") {
-                userDefaults.setValue(false, forKey: "service_status_preference")
-                StatusViewController.addMessage(NSLocalizedString("Service destroyed", comment: ""))
-                trackingController?.stop()
-                trackingController = nil
-                showToast(message: NSLocalizedString("Service destroyed", comment: ""))
-            }
-        case "org.traccar.client.sos":
-            positionProvider = PositionProvider()
-            positionProvider?.delegate = self
-            positionProvider?.startUpdates()
-        default:
-            break
-        }
+        // switch shortcutItem.type {
+        // case "org.traccar.client.start":
+        //     if !userDefaults.bool(forKey: "service_status_preference") {
+        //         userDefaults.setValue(true, forKey: "service_status_preference")
+        //         // StatusViewController.addMessage(NSLocalizedString("Service created", comment: ""))
+        //         trackingController = TrackingController()
+        //         trackingController?.start()
+        //         showToast(message: NSLocalizedString("Service created", comment: ""))
+        //     }
+        // case "org.traccar.client.stop":
+        //     if userDefaults.bool(forKey: "service_status_preference") {
+        //         userDefaults.setValue(false, forKey: "service_status_preference")
+        //         // StatusViewController.addMessage(NSLocalizedString("Service destroyed", comment: ""))
+        //         trackingController?.stop()
+        //         trackingController = nil
+        //         showToast(message: NSLocalizedString("Service destroyed", comment: ""))
+        //     }
+        // case "org.traccar.client.sos":
+        //     positionProvider = PositionProvider()
+        //     positionProvider?.delegate = self
+        //     positionProvider?.startUpdates()
+        // default:
+        //     break
+        // }
         
-        completionHandler(true)
+        // completionHandler(true)
     }
     
     func didUpdate(position: Position) {
@@ -121,9 +129,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate, PositionProviderDelegate 
         positionProvider?.stopUpdates()
         positionProvider = nil
 
-        let userDefaults = UserDefaults.standard
+        // let userDefaults = UserDefaults.standard
         
-        if let request = ProtocolFormatter.formatPostion(position, url: userDefaults.string(forKey: "server_url_preference")!, alarm: "sos") {
+        if let request = ProtocolFormatter.formatPostion(position, url: apiURL, alarm: "sos") {
             RequestManager.sendRequest(request, completionHandler: {(_ success: Bool) -> Void in
                 if success {
                     self.showToast(message: NSLocalizedString("Send successfully", comment: ""))
@@ -167,23 +175,23 @@ class AppDelegate: UIResponder, UIApplicationDelegate, PositionProviderDelegate 
         UserDefaults.standard.register(defaults: defaults)
     }
     
-    func migrateLegacyDefaults() {
-        let userDefaults = UserDefaults.standard
-        if userDefaults.object(forKey: "server_address_preference") != nil {
-            var urlComponents = URLComponents()
-            urlComponents.scheme = userDefaults.bool(forKey: "secure_preference") ? "https" : "http"
-            urlComponents.host = userDefaults.string(forKey: "server_address_preference")
-            urlComponents.port = userDefaults.integer(forKey: "server_port_preference")
-            if urlComponents.port == 0 {
-                urlComponents.port = 5055
-            }
+    // func migrateLegacyDefaults() {
+    //     let userDefaults = UserDefaults.standard
+    //     if userDefaults.object(forKey: "server_address_preference") != nil {
+    //         var urlComponents = URLComponents()
+    //         urlComponents.scheme = userDefaults.bool(forKey: "secure_preference") ? "https" : "http"
+    //         urlComponents.host = userDefaults.string(forKey: "server_address_preference")
+    //         urlComponents.port = userDefaults.integer(forKey: "server_port_preference")
+    //         if urlComponents.port == 0 {
+    //             urlComponents.port = 5055
+    //         }
             
-            userDefaults.set(urlComponents.string, forKey: "server_url_preference")
+    //         userDefaults.set(urlComponents.string, forKey: "server_url_preference")
             
-            userDefaults.removeObject(forKey: "server_port_preference")
-            userDefaults.removeObject(forKey: "server_address_preference")
-            userDefaults.removeObject(forKey: "secure_preference")
-        }
-    }
+    //         userDefaults.removeObject(forKey: "server_port_preference")
+    //         userDefaults.removeObject(forKey: "server_address_preference")
+    //         userDefaults.removeObject(forKey: "secure_preference")
+    //     }
+    // }
 
 }

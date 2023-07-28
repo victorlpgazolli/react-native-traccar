@@ -29,15 +29,15 @@ class TrackingController: NSObject, PositionProviderDelegate, NetworkManagerDele
     let locationManager = CLLocationManager()
     let databaseHelper = DatabaseHelper()
     let networkManager = NetworkManager()
-    let userDefaults = UserDefaults.standard
+    // let userDefaults = UserDefaults.standard
 
     let url: String
     let buffer: Bool
     
     override init() {
         online = networkManager.online()
-        url = userDefaults.string(forKey: "server_url_preference")!
-        buffer = userDefaults.bool(forKey: "buffer_preference")
+        url = AppDelegate.instance.apiURL  //userDefaults.string(forKey: "server_url_preference")!
+        buffer = AppDelegate.instance.buffer_preference // userDefaults.bool(forKey: "buffer_preference")
 
         super.init()
 
@@ -64,7 +64,7 @@ class TrackingController: NSObject, PositionProviderDelegate, NetworkManagerDele
     }
 
     func didUpdate(position: Position) {
-        StatusViewController.addMessage(NSLocalizedString("Location update", comment: ""))
+        // StatusViewController.addMessage(NSLocalizedString("Location update", comment: ""))
         if buffer {
             write(position)
         } else {
@@ -73,7 +73,7 @@ class TrackingController: NSObject, PositionProviderDelegate, NetworkManagerDele
     }
     
     func didUpdateNetwork(online: Bool) {
-        StatusViewController.addMessage(NSLocalizedString("Connectivity change", comment: ""))
+        // StatusViewController.addMessage(NSLocalizedString("Connectivity change", comment: ""))
         if !self.online && online {
             read()
         }
@@ -101,7 +101,7 @@ class TrackingController: NSObject, PositionProviderDelegate, NetworkManagerDele
     
     func read() {
         if let position = databaseHelper.selectPosition() {
-            if (position.deviceId == userDefaults.string(forKey: "device_id_preference")) {
+            if (position.deviceId == AppDelegate.instance.deviceId) {
                 send(position)
             } else {
                 delete(position)
@@ -124,14 +124,14 @@ class TrackingController: NSObject, PositionProviderDelegate, NetworkManagerDele
                         self.delete(position)
                     }
                 } else {
-                    StatusViewController.addMessage(NSLocalizedString("Send failed", comment: ""))
+                    // StatusViewController.addMessage(NSLocalizedString("Send failed", comment: ""))
                     if self.buffer {
                         self.retry()
                     }
                 }
             })
         } else {
-            StatusViewController.addMessage(NSLocalizedString("Send failed", comment: ""))
+            // StatusViewController.addMessage(NSLocalizedString("Send failed", comment: ""))
             if buffer {
                 self.retry()
             }

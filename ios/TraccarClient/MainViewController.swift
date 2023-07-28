@@ -54,23 +54,23 @@ class MainViewController: IASKAppSettingsViewController {
     func didChangeSetting(_ notification: Notification) {
         if let status = notification.userInfo?["service_status_preference"] as? Bool {
             if status && AppDelegate.instance.trackingController == nil {
-                let userDefaults = UserDefaults.standard
-                let url = userDefaults.string(forKey: "server_url_preference")
-                let frequency = userDefaults.integer(forKey: "frequency_preference")
+                // let userDefaults = UserDefaults.standard
+                let url = AppDelegate.instance.apiURL //userDefaults.string(forKey: "server_url_preference")
+                let frequency = AppDelegate.instance.frequency //userDefaults.integer(forKey: "frequency_preference")
                 
-                let candidateUrl = NSURL(string: url!)
+                let candidateUrl = NSURL(string: url)
                 
                 if candidateUrl == nil || candidateUrl?.host == nil || (candidateUrl?.scheme != "http" && candidateUrl?.scheme != "https") {
                     self.showError("Invalid server URL")
                 } else if frequency <= 0 {
                     self.showError("Invalid frequency value")
                 } else {
-                    StatusViewController.addMessage(NSLocalizedString("Service created", comment: ""))
+                    // StatusViewController.addMessage(NSLocalizedString("Service created", comment: ""))
                     AppDelegate.instance.trackingController = TrackingController()
                     AppDelegate.instance.trackingController?.start()
                 }
             } else if !status && AppDelegate.instance.trackingController != nil {
-                StatusViewController.addMessage(NSLocalizedString("Service destroyed", comment: ""))
+                // StatusViewController.addMessage(NSLocalizedString("Service destroyed", comment: ""))
                 AppDelegate.instance.trackingController?.stop()
                 AppDelegate.instance.trackingController = nil
             }
