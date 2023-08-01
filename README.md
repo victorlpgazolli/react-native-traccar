@@ -10,20 +10,30 @@ npm install react-native-traccar
 
 ## Usage
 
-```js
+```ts
 import { 
     startTrackingService,
-    stopTrackingService
+    stopTrackingService,
+    setupTrackingService
  } from 'react-native-traccar';
 
+
+interface SetupOptions {
+    url: string
+    deviceId: string
+    distanceFilter?: number // set 0 to disable, defaults to 0
+    locationUpdatesIntervalInSeconds?: number // defaults to 600s (10 minutes)
+}
+
+setupTrackingService(options: SetupOptions): void
+
+
+startTrackingService(): void
+
 // ...
 
-startTrackingService()
 
-// ...
-
-
-stopTrackingService()
+stopTrackingService(): void
 
 ```
 
