@@ -7,13 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		00E356F31AD99517003FC87E /* TraccarExampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* TraccarExampleTests.m */; };
-		065C328D156C240D64B6AA0F /* libPods-TraccarExample-TraccarExampleTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 257E195055673AB0829FDEB8 /* libPods-TraccarExample-TraccarExampleTests.a */; };
 		13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.mm */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
+		1A13E95AE30EE177403E679E /* libPods-TraccarExample.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F2F26A4A4837146FDB2C26AA /* libPods-TraccarExample.a */; };
+		27973FC02A79E2CA009AD0D1 /* react_native_traccar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27973FBF2A79E2CA009AD0D1 /* react_native_traccar.framework */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
-		8FCFDBF65F32B2146070AB69 /* libPods-TraccarExample.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 927C623C9C54EBB9C4DECC8C /* libPods-TraccarExample.a */; };
+		FC124A567F562B5EB179F563 /* libPods-TraccarExample-TraccarExampleTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C73B13B801DCABDC49BC62EE /* libPods-TraccarExample-TraccarExampleTests.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,24 +28,21 @@
 
 /* Begin PBXFileReference section */
 		00E356EE1AD99517003FC87E /* TraccarExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TraccarExampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		00E356F21AD99517003FC87E /* TraccarExampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TraccarExampleTests.m; sourceTree = "<group>"; };
+		129AF9FEF4A1853485808F65 /* Pods-TraccarExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TraccarExample.release.xcconfig"; path = "Target Support Files/Pods-TraccarExample/Pods-TraccarExample.release.xcconfig"; sourceTree = "<group>"; };
 		13B07F961A680F5B00A75B9A /* TraccarExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TraccarExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = TraccarExample/AppDelegate.h; sourceTree = "<group>"; };
 		13B07FB01A68108700A75B9A /* AppDelegate.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = AppDelegate.mm; path = TraccarExample/AppDelegate.mm; sourceTree = "<group>"; };
 		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = TraccarExample/Images.xcassets; sourceTree = "<group>"; };
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = TraccarExample/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = TraccarExample/main.m; sourceTree = "<group>"; };
-		1497B6C64EC5E6CC170609F5 /* Pods-TraccarExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TraccarExample.release.xcconfig"; path = "Target Support Files/Pods-TraccarExample/Pods-TraccarExample.release.xcconfig"; sourceTree = "<group>"; };
-		1CD1F51F79FF64421F45821F /* Pods-TraccarExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TraccarExample.debug.xcconfig"; path = "Target Support Files/Pods-TraccarExample/Pods-TraccarExample.debug.xcconfig"; sourceTree = "<group>"; };
-		257E195055673AB0829FDEB8 /* libPods-TraccarExample-TraccarExampleTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TraccarExample-TraccarExampleTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		272DEA322F0C3EF99FD4A24E /* Pods-TraccarExample-TraccarExampleTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TraccarExample-TraccarExampleTests.debug.xcconfig"; path = "Target Support Files/Pods-TraccarExample-TraccarExampleTests/Pods-TraccarExample-TraccarExampleTests.debug.xcconfig"; sourceTree = "<group>"; };
-		277E9B972A60B9FD003F6B28 /* libreact-native-traccar.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = "libreact-native-traccar.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		277E9B992A60BA5F003F6B28 /* libreact-native-traccar.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = "libreact-native-traccar.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		4C2268EAB7866421734E9013 /* Pods-TraccarExample-TraccarExampleTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TraccarExample-TraccarExampleTests.release.xcconfig"; path = "Target Support Files/Pods-TraccarExample-TraccarExampleTests/Pods-TraccarExample-TraccarExampleTests.release.xcconfig"; sourceTree = "<group>"; };
+		27973FBF2A79E2CA009AD0D1 /* react_native_traccar.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = react_native_traccar.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = TraccarExample/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		927C623C9C54EBB9C4DECC8C /* libPods-TraccarExample.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TraccarExample.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AEC1B3E5CDF66D6F8FF5265E /* Pods-TraccarExample-TraccarExampleTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TraccarExample-TraccarExampleTests.debug.xcconfig"; path = "Target Support Files/Pods-TraccarExample-TraccarExampleTests/Pods-TraccarExample-TraccarExampleTests.debug.xcconfig"; sourceTree = "<group>"; };
+		B353D121A0E7337894407083 /* Pods-TraccarExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TraccarExample.debug.xcconfig"; path = "Target Support Files/Pods-TraccarExample/Pods-TraccarExample.debug.xcconfig"; sourceTree = "<group>"; };
+		C73B13B801DCABDC49BC62EE /* libPods-TraccarExample-TraccarExampleTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TraccarExample-TraccarExampleTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D92C145ED31EB47B7BD65DA2 /* Pods-TraccarExample-TraccarExampleTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TraccarExample-TraccarExampleTests.release.xcconfig"; path = "Target Support Files/Pods-TraccarExample-TraccarExampleTests/Pods-TraccarExample-TraccarExampleTests.release.xcconfig"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
+		F2F26A4A4837146FDB2C26AA /* libPods-TraccarExample.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TraccarExample.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,7 +50,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				065C328D156C240D64B6AA0F /* libPods-TraccarExample-TraccarExampleTests.a in Frameworks */,
+				FC124A567F562B5EB179F563 /* libPods-TraccarExample-TraccarExampleTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,30 +58,14 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8FCFDBF65F32B2146070AB69 /* libPods-TraccarExample.a in Frameworks */,
+				27973FC02A79E2CA009AD0D1 /* react_native_traccar.framework in Frameworks */,
+				1A13E95AE30EE177403E679E /* libPods-TraccarExample.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		00E356EF1AD99517003FC87E /* TraccarExampleTests */ = {
-			isa = PBXGroup;
-			children = (
-				00E356F21AD99517003FC87E /* TraccarExampleTests.m */,
-				00E356F01AD99517003FC87E /* Supporting Files */,
-			);
-			path = TraccarExampleTests;
-			sourceTree = "<group>";
-		};
-		00E356F01AD99517003FC87E /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				00E356F11AD99517003FC87E /* Info.plist */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
 		13B07FAE1A68108700A75B9A /* TraccarExample */ = {
 			isa = PBXGroup;
 			children = (
@@ -101,11 +82,10 @@
 		2D16E6871FA4F8E400B85C8A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				277E9B992A60BA5F003F6B28 /* libreact-native-traccar.a */,
-				277E9B972A60B9FD003F6B28 /* libreact-native-traccar.a */,
+				27973FBF2A79E2CA009AD0D1 /* react_native_traccar.framework */,
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
-				927C623C9C54EBB9C4DECC8C /* libPods-TraccarExample.a */,
-				257E195055673AB0829FDEB8 /* libPods-TraccarExample-TraccarExampleTests.a */,
+				F2F26A4A4837146FDB2C26AA /* libPods-TraccarExample.a */,
+				C73B13B801DCABDC49BC62EE /* libPods-TraccarExample-TraccarExampleTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -122,7 +102,6 @@
 			children = (
 				13B07FAE1A68108700A75B9A /* TraccarExample */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
-				00E356EF1AD99517003FC87E /* TraccarExampleTests */,
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				BBD78D7AC51CEA395F1C20DB /* Pods */,
@@ -144,10 +123,10 @@
 		BBD78D7AC51CEA395F1C20DB /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				1CD1F51F79FF64421F45821F /* Pods-TraccarExample.debug.xcconfig */,
-				1497B6C64EC5E6CC170609F5 /* Pods-TraccarExample.release.xcconfig */,
-				272DEA322F0C3EF99FD4A24E /* Pods-TraccarExample-TraccarExampleTests.debug.xcconfig */,
-				4C2268EAB7866421734E9013 /* Pods-TraccarExample-TraccarExampleTests.release.xcconfig */,
+				B353D121A0E7337894407083 /* Pods-TraccarExample.debug.xcconfig */,
+				129AF9FEF4A1853485808F65 /* Pods-TraccarExample.release.xcconfig */,
+				AEC1B3E5CDF66D6F8FF5265E /* Pods-TraccarExample-TraccarExampleTests.debug.xcconfig */,
+				D92C145ED31EB47B7BD65DA2 /* Pods-TraccarExample-TraccarExampleTests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -159,12 +138,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "TraccarExampleTests" */;
 			buildPhases = (
-				218675E289CA4D6564C8495B /* [CP] Check Pods Manifest.lock */,
+				CC25EB2AC5E4BC72EC7126F1 /* [CP] Check Pods Manifest.lock */,
 				00E356EA1AD99517003FC87E /* Sources */,
 				00E356EB1AD99517003FC87E /* Frameworks */,
 				00E356EC1AD99517003FC87E /* Resources */,
-				A26C56BCD929357B3892371D /* [CP] Embed Pods Frameworks */,
-				828B2B9A3DA03CA7DE68AA66 /* [CP] Copy Pods Resources */,
+				D2EB8BE8B039E3436A80CC3F /* [CP] Embed Pods Frameworks */,
+				381D84FF8999519F70F64355 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -180,14 +159,14 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "TraccarExample" */;
 			buildPhases = (
-				9125291799A37E16B4AA5E3A /* [CP] Check Pods Manifest.lock */,
+				E990226FE085BF741C99DD30 /* [CP] Check Pods Manifest.lock */,
 				FD10A7F022414F080027D42C /* Start Packager */,
 				13B07F871A680F5B00A75B9A /* Sources */,
 				13B07F8C1A680F5B00A75B9A /* Frameworks */,
 				13B07F8E1A680F5B00A75B9A /* Resources */,
 				00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */,
-				FF91E20C99F9A6A9456BE699 /* [CP] Embed Pods Frameworks */,
-				E49477C6AFC521ADB6457C2F /* [CP] Copy Pods Resources */,
+				7E4D3F012552FBF8BD1DC3C6 /* [CP] Embed Pods Frameworks */,
+				C211AD0D820D3AC9D0D94325 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -260,7 +239,6 @@
 			files = (
 			);
 			inputPaths = (
-				"$(SRCROOT)/.xcode.env.local",
 				"$(SRCROOT)/.xcode.env",
 			);
 			name = "Bundle React Native code and images";
@@ -270,7 +248,58 @@
 			shellPath = /bin/sh;
 			shellScript = "set -e\n\nWITH_ENVIRONMENT=\"../node_modules/react-native/scripts/xcode/with-environment.sh\"\nREACT_NATIVE_XCODE=\"../node_modules/react-native/scripts/react-native-xcode.sh\"\n\n/bin/sh -c \"$WITH_ENVIRONMENT $REACT_NATIVE_XCODE\"\n";
 		};
-		218675E289CA4D6564C8495B /* [CP] Check Pods Manifest.lock */ = {
+		381D84FF8999519F70F64355 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TraccarExample-TraccarExampleTests/Pods-TraccarExample-TraccarExampleTests-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TraccarExample-TraccarExampleTests/Pods-TraccarExample-TraccarExampleTests-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TraccarExample-TraccarExampleTests/Pods-TraccarExample-TraccarExampleTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7E4D3F012552FBF8BD1DC3C6 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TraccarExample/Pods-TraccarExample-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TraccarExample/Pods-TraccarExample-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TraccarExample/Pods-TraccarExample-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C211AD0D820D3AC9D0D94325 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TraccarExample/Pods-TraccarExample-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TraccarExample/Pods-TraccarExample-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TraccarExample/Pods-TraccarExample-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CC25EB2AC5E4BC72EC7126F1 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -292,24 +321,24 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		828B2B9A3DA03CA7DE68AA66 /* [CP] Copy Pods Resources */ = {
+		D2EB8BE8B039E3436A80CC3F /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-TraccarExample-TraccarExampleTests/Pods-TraccarExample-TraccarExampleTests-resources-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-TraccarExample-TraccarExampleTests/Pods-TraccarExample-TraccarExampleTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
-			name = "[CP] Copy Pods Resources";
+			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-TraccarExample-TraccarExampleTests/Pods-TraccarExample-TraccarExampleTests-resources-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-TraccarExample-TraccarExampleTests/Pods-TraccarExample-TraccarExampleTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TraccarExample-TraccarExampleTests/Pods-TraccarExample-TraccarExampleTests-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TraccarExample-TraccarExampleTests/Pods-TraccarExample-TraccarExampleTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		9125291799A37E16B4AA5E3A /* [CP] Check Pods Manifest.lock */ = {
+		E990226FE085BF741C99DD30 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -331,40 +360,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		A26C56BCD929357B3892371D /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-TraccarExample-TraccarExampleTests/Pods-TraccarExample-TraccarExampleTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-TraccarExample-TraccarExampleTests/Pods-TraccarExample-TraccarExampleTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TraccarExample-TraccarExampleTests/Pods-TraccarExample-TraccarExampleTests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		E49477C6AFC521ADB6457C2F /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-TraccarExample/Pods-TraccarExample-resources-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-TraccarExample/Pods-TraccarExample-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TraccarExample/Pods-TraccarExample-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		FD10A7F022414F080027D42C /* Start Packager */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -384,23 +379,6 @@
 			shellScript = "export RCT_METRO_PORT=\"${RCT_METRO_PORT:=8081}\"\necho \"export RCT_METRO_PORT=${RCT_METRO_PORT}\" > \"${SRCROOT}/../node_modules/react-native/scripts/.packager.env\"\nif [ -z \"${RCT_NO_LAUNCH_PACKAGER+xxx}\" ] ; then\n  if nc -w 5 -z localhost ${RCT_METRO_PORT} ; then\n    if ! curl -s \"http://localhost:${RCT_METRO_PORT}/status\" | grep -q \"packager-status:running\" ; then\n      echo \"Port ${RCT_METRO_PORT} already in use, packager is either not running or not running correctly\"\n      exit 2\n    fi\n  else\n    open \"$SRCROOT/../node_modules/react-native/scripts/launchPackager.command\" || echo \"Can't start packager automatically\"\n  fi\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		FF91E20C99F9A6A9456BE699 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-TraccarExample/Pods-TraccarExample-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-TraccarExample/Pods-TraccarExample-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TraccarExample/Pods-TraccarExample-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -408,7 +386,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				00E356F31AD99517003FC87E /* TraccarExampleTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -434,7 +411,7 @@
 /* Begin XCBuildConfiguration section */
 		00E356F61AD99517003FC87E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 272DEA322F0C3EF99FD4A24E /* Pods-TraccarExample-TraccarExampleTests.debug.xcconfig */;
+			baseConfigurationReference = AEC1B3E5CDF66D6F8FF5265E /* Pods-TraccarExample-TraccarExampleTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -461,7 +438,7 @@
 		};
 		00E356F71AD99517003FC87E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4C2268EAB7866421734E9013 /* Pods-TraccarExample-TraccarExampleTests.release.xcconfig */;
+			baseConfigurationReference = D92C145ED31EB47B7BD65DA2 /* Pods-TraccarExample-TraccarExampleTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
@@ -485,12 +462,25 @@
 		};
 		13B07F941A680F5B00A75B9A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1CD1F51F79FF64421F45821F /* Pods-TraccarExample.debug.xcconfig */;
+			baseConfigurationReference = B353D121A0E7337894407083 /* Pods-TraccarExample.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_ROOT}/Flipper-DoubleConversion/Frameworks\"",
+					"\"${PODS_ROOT}/Flipper-Glog/Frameworks\"",
+					"\"${PODS_ROOT}/OpenSSL-Universal/Frameworks\"",
+					"\"${PODS_ROOT}/hermes-engine/destroot/Library/Frameworks/universal\"",
+					"\"${PODS_XCFRAMEWORKS_BUILD_DIR}/Flipper-DoubleConversion\"",
+					"\"${PODS_XCFRAMEWORKS_BUILD_DIR}/Flipper-Glog\"",
+					"\"${PODS_XCFRAMEWORKS_BUILD_DIR}/OpenSSL-Universal\"",
+					"\"${PODS_XCFRAMEWORKS_BUILD_DIR}/hermes-engine/Pre-built\"",
+					"\"${PODS_XCFRAMEWORKS_BUILD_DIR}/react-native-traccar\"",
+				);
 				INFOPLIST_FILE = TraccarExample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -504,6 +494,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = TraccarExample;
+				SWIFT_INCLUDE_PATHS = "$(inherited) \"${PODS_CONFIGURATION_BUILD_DIR}/YogaKit\" \"${PODS_CONFIGURATION_BUILD_DIR}/react-native-traccar\"";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -512,9 +503,10 @@
 		};
 		13B07F951A680F5B00A75B9A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1497B6C64EC5E6CC170609F5 /* Pods-TraccarExample.release.xcconfig */;
+			baseConfigurationReference = 129AF9FEF4A1853485808F65 /* Pods-TraccarExample.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				INFOPLIST_FILE = TraccarExample/Info.plist;
@@ -569,6 +561,7 @@
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = i386;
+				FRAMEWORK_SEARCH_PATHS = "";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -584,6 +577,14 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"${PODS_CONFIGURATION_BUILD_DIR}/ReactCommon-Samples/ReactCommon_Samples.framework/Headers",
+					"${PODS_CONFIGURATION_BUILD_DIR}/ReactCommon/ReactCommon.framework/Headers/react/nativemodule/core",
+					"${PODS_CONFIGURATION_BUILD_DIR}/ReactCommon-Samples/ReactCommon_Samples.framework/Headers/platform/ios",
+					"${PODS_CONFIGURATION_BUILD_DIR}/React-NativeModulesApple/React_NativeModulesApple.framework/Headers",
+					"${PODS_CONFIGURATION_BUILD_DIR}/React-graphics/React_graphics.framework/Headers/react/renderer/graphics/platform/ios",
+				);
 				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					/usr/lib/swift,
@@ -642,6 +643,7 @@
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = i386;
+				FRAMEWORK_SEARCH_PATHS = "";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -650,6 +652,14 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"${PODS_CONFIGURATION_BUILD_DIR}/ReactCommon-Samples/ReactCommon_Samples.framework/Headers",
+					"${PODS_CONFIGURATION_BUILD_DIR}/ReactCommon/ReactCommon.framework/Headers/react/nativemodule/core",
+					"${PODS_CONFIGURATION_BUILD_DIR}/ReactCommon-Samples/ReactCommon_Samples.framework/Headers/platform/ios",
+					"${PODS_CONFIGURATION_BUILD_DIR}/React-NativeModulesApple/React_NativeModulesApple.framework/Headers",
+					"${PODS_CONFIGURATION_BUILD_DIR}/React-graphics/React_graphics.framework/Headers/react/renderer/graphics/platform/ios",
+				);
 				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					/usr/lib/swift,

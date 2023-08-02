@@ -16,7 +16,7 @@
 
 import UIKit
 import CoreData
-import Firebase
+// import Firebase
 import Foundation
 import UIKit
 
