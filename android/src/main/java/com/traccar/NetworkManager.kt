@@ -56,7 +56,8 @@ class NetworkManager(private val context: Context, private val handler: NetworkH
     }
 
     companion object {
-        private val TAG = NetworkManager::class.java.simpleName
+private val TAG = "Traccar" + NetworkManager::class.java.simpleName
+
     }
 
 }

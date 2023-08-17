@@ -20,11 +20,21 @@ const Traccar = Module
       }
     );
 
-export function startTrackingService(): void {
+
+function setupTrackingService(url: string, deviceId: string, interval: number): void {
+
+  return Traccar.setupTrackingService(url, deviceId, interval);
+}
+function startTrackingService(): void {
   return Traccar.startTrackingService();
 }
 
-export function stopTrackingService(): void {
+function stopTrackingService(): void {
   return Traccar.stopTrackingService();
 }
 
+export default {
+  startTrackingService,
+  stopTrackingService,
+  setupTrackingService
+};

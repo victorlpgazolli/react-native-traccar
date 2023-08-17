@@ -50,7 +50,7 @@ class TrackingService : Service() {
                     // https://developer.android.com/reference/android/support/v4/app/NotificationCompat.Builder.html#NotificationCompat.Builder(android.content.Context)
                     ""
                 }
-    
+
         val notificationBuilder = NotificationCompat.Builder(this, channelId )
         val notification = notificationBuilder.setOngoing(true)
                 .setSmallIcon(R.drawable.ic_stat_notify)
@@ -91,10 +91,9 @@ class TrackingService : Service() {
         Log.i(TAG, "service create")
         startForeground()
         sendBroadcast(Intent(ACTION_STARTED))
-        // StatusActivity.addMessage(getString(R.string.status_service_create))
 
         if (ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED) {
-            if (PreferenceManager.getDefaultSharedPreferences(this).getBoolean(Constants.KEY_WAKELOCK, true)) {
+            if (this.getSharedPreferences("main", Context.MODE_PRIVATE).getBoolean(Constants.KEY_WAKELOCK, true)) {
                 val powerManager = getSystemService(POWER_SERVICE) as PowerManager
                 wakeLock = powerManager.newWakeLock(PowerManager.PARTIAL_WAKE_LOCK, javaClass.name)
                 wakeLock?.acquire()
@@ -122,7 +121,6 @@ class TrackingService : Service() {
         stopForeground(true)
         Log.i(TAG, "service destroy")
         sendBroadcast(Intent(ACTION_STOPPED))
-        // StatusActivity.addMessage(getString(R.string.status_service_destroy))
         if (wakeLock?.isHeld == true) {
             wakeLock?.release()
         }
@@ -133,7 +131,7 @@ class TrackingService : Service() {
 
         const val ACTION_STARTED = "com.traccar.action.SERVICE_STARTED"
         const val ACTION_STOPPED = "com.traccar.action.SERVICE_STOPPED"
-        private val TAG = TrackingService::class.java.simpleName
+        private val TAG = "Traccar"+TrackingService::class.java.simpleName
         private const val NOTIFICATION_ID = 1
 
         @SuppressLint("UnspecifiedImmutableFlag")

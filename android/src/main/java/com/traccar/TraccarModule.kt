@@ -6,21 +6,32 @@ import com.facebook.react.bridge.ReactMethod
 import com.facebook.react.bridge.Promise
 
 
-class TraccarModule(reactContext: ReactApplicationContext) : ReactContextBaseJavaModule(reactContext) {
-  private val reactContext: ReactApplicationContext = reactContext
+class TraccarModule(context: ReactApplicationContext) : ReactContextBaseJavaModule(context) {
+  private val reactContext: ReactApplicationContext
 
+  private lateinit var traccarClient: TraccarClientBridge
+
+  init {
+    reactContext = context
+    traccarClient = TraccarClientBridge(reactContext)
+  }
   override fun getName(): String {
     return NAME
   }
 
   @ReactMethod
   fun startTrackingService() {
-    TraccarClientBridge().startTrackingService(this.reactContext)
+    traccarClient.startTrackingService()
   }
 
   @ReactMethod
   fun stopTrackingService() {
-    TraccarClientBridge().stopTrackingService(this.reactContext)
+    traccarClient.stopTrackingService()
+  }
+
+  @ReactMethod
+  fun setupTrackingService(url: String, deviceId: String, interval: Int) {
+    traccarClient.setupTrackingService(url, deviceId, interval)
   }
 
   companion object {

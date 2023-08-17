@@ -36,9 +36,9 @@ abstract class PositionProvider(
         fun onPositionError(error: Throwable)
     }
 
-    protected var preferences: SharedPreferences = PreferenceManager.getDefaultSharedPreferences(context)
+    protected var preferences: SharedPreferences = context.getSharedPreferences("main", Context.MODE_PRIVATE)
     protected var deviceId = preferences.getString(Constants.KEY_DEVICE, "undefined")!!
-    protected var interval = preferences.getString(Constants.KEY_INTERVAL, "600")!!.toLong() * 1000
+    protected var interval = preferences.getInt(Constants.KEY_INTERVAL, 600)!!.toLong() * 1000
     protected var distance: Double = preferences.getString(Constants.KEY_DISTANCE, "0")!!.toInt().toDouble()
     protected var angle: Double = preferences.getString(Constants.KEY_ANGLE, "0")!!.toInt().toDouble()
     private var lastLocation: Location? = null
@@ -55,6 +55,10 @@ abstract class PositionProvider(
                     && abs(location.bearing - lastLocation.bearing) >= angle)
         ) {
             Log.i(TAG, "location new")
+            Log.i(TAG, "deviceId:" + deviceId)
+
+            Log.i(TAG, "interval:" + interval)
+
             this.lastLocation = location
             listener.onPositionUpdate(Position(deviceId, location, getBatteryStatus(context)))
         } else {
@@ -77,7 +81,8 @@ abstract class PositionProvider(
     }
 
     companion object {
-        private val TAG = PositionProvider::class.java.simpleName
+private val TAG = "Traccar" + PositionProvider::class.java.simpleName
+
         const val MINIMUM_INTERVAL: Long = 1000
     }
 

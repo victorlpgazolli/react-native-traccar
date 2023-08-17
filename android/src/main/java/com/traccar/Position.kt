@@ -18,6 +18,7 @@ package com.traccar
 import android.location.Location
 import android.location.LocationManager
 import android.os.Build
+import android.util.Log
 import java.util.*
 
 data class Position(
@@ -59,6 +60,24 @@ data class Position(
             false
         },
     )
+
+    override fun toString(): String {
+      val pointFormatted: String =         "( " +
+        "id: "+ this.id.toString() + ", " +
+        "deviceId: "+ this.deviceId.toString() + ", " +
+        "time: "+ this.time.toString() + ", " +
+        "latitude: "+ this.latitude.toString() + ", " +
+        "longitude: "+ this.longitude.toString() + ", " +
+        "altitude: "+ this.altitude.toString() + ", " +
+        "speed: "+ this.speed.toString() + ", " +
+        "course: "+ this.course.toString() + ", " +
+        "accuracy: "+ this.accuracy.toString() + ", " +
+        "battery: "+ this.battery.toString() + ", " +
+        "charging: "+ this.charging.toString() + ", " +
+        "mock: "+ this.mock.toString() + " )"
+
+      return pointFormatted
+    }
 }
 
 private const val rolloverDate = 1554508800000L // April 6, 2019

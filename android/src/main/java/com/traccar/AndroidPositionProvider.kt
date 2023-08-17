@@ -22,6 +22,7 @@ import android.location.LocationListener
 import android.location.LocationManager
 import android.os.Bundle
 import android.os.Looper
+import android.util.Log
 import com.traccar.Constants
 class AndroidPositionProvider(context: Context, listener: PositionListener) : PositionProvider(context, listener), LocationListener {
 
@@ -45,6 +46,7 @@ class AndroidPositionProvider(context: Context, listener: PositionListener) : Po
     @Suppress("DEPRECATION", "MissingPermission")
     override fun requestSingleLocation() {
         try {
+            Log.i(TAG, "deviceId:" + deviceId)
             val location = locationManager.getLastKnownLocation(LocationManager.PASSIVE_PROVIDER)
             if (location != null) {
                 listener.onPositionUpdate(Position(deviceId, location, getBatteryStatus(context)))
@@ -79,5 +81,8 @@ class AndroidPositionProvider(context: Context, listener: PositionListener) : Po
             else   -> LocationManager.NETWORK_PROVIDER
         }
     }
+  companion object {
+    private val TAG = "Traccar" + AndroidPositionProvider::class.java.simpleName
 
+  }
 }

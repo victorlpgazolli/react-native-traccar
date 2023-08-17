@@ -5,7 +5,7 @@ class Constants {
     companion object {
         const val NAME = "Constants"
         const val KEY_DEVICE = "id"
-        const val KEY_URL = "http://localhost:8081/open-url"
+        const val KEY_URL = "http://localhost:5055"
         const val KEY_INTERVAL = "interval"
         const val KEY_DISTANCE = "distance"
         const val KEY_ANGLE = "angle"

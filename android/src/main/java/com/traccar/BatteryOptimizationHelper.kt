@@ -68,7 +68,7 @@ class BatteryOptimizationHelper {
 
     fun requestException(context: Context): Boolean {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-            val sharedPreferences = PreferenceManager.getDefaultSharedPreferences(context)
+            val sharedPreferences = context.getSharedPreferences("main", Context.MODE_PRIVATE)
             if (!sharedPreferences.getBoolean(KEY_EXCEPTION_REQUESTED, false)) {
                 sharedPreferences.edit().putBoolean(KEY_EXCEPTION_REQUESTED, true).apply()
                 val powerManager = context.getSystemService(PowerManager::class.java)

@@ -30,7 +30,7 @@ import com.traccar.Constants
 class TrackingController(private val context: Context) : PositionListener, NetworkHandler {
 
     private val handler = Handler(Looper.getMainLooper())
-    private val preferences = PreferenceManager.getDefaultSharedPreferences(context)
+    private val preferences = context.getSharedPreferences("main", Context.MODE_PRIVATE)
     private val positionProvider = PositionProviderFactory.create(context, this)
     private val databaseHelper = DatabaseHelper(context)
     private val networkManager = NetworkManager(context, this)
@@ -65,7 +65,6 @@ class TrackingController(private val context: Context) : PositionListener, Netwo
 
     override fun onPositionUpdate(position: Position) {
         Log.i(TAG, "position update!")
-        // StatusActivity.addMessage(context.getString(R.string.status_location_update))
         if (buffer) {
             write(position)
         } else {
@@ -79,7 +78,6 @@ class TrackingController(private val context: Context) : PositionListener, Netwo
     override fun onNetworkUpdate(isOnline: Boolean) {
         val message = if (isOnline) R.string.status_network_online else R.string.status_network_offline
         Log.i(TAG, "network update!")
-        // StatusActivity.addMessage(context.getString(message))
         if (!this.isOnline && isOnline) {
             read()
         }
@@ -95,15 +93,9 @@ class TrackingController(private val context: Context) : PositionListener, Netwo
     //
 
     private fun log(action: String, position: Position?) {
-        var formattedAction: String = action
         if (position != null) {
-            formattedAction +=
-                    " (id:" + position.id +
-                    " time:" + position.time.time / 1000 +
-                    " lat:" + position.latitude +
-                    " lon:" + position.longitude + ")"
+          Log.d(TAG, action +": "+ position.toString())
         }
-        Log.d(TAG, formattedAction)
     }
 
     private fun write(position: Position) {
@@ -127,11 +119,11 @@ class TrackingController(private val context: Context) : PositionListener, Netwo
                 if (success) {
                     if (result != null) {
                         Log.i(TAG, "read result deviceId: " + result.deviceId)
-                        // if (result.deviceId == preferences.getString(Constants.KEY_DEVICE, null)) {
-                            send(result)
-                        // } else {
-                        //     delete(result)
-                        // }
+                         if (result.deviceId == preferences.getString(Constants.KEY_DEVICE, null)) {
+                        send(result)
+                         } else {
+                             delete(result)
+                         }
                     } else {
                         isWaiting = true
                     }
@@ -156,7 +148,8 @@ class TrackingController(private val context: Context) : PositionListener, Netwo
     }
 
     private fun send(position: Position) {
-        log("send", position)
+        log(TAG + "Send",position)
+        Log.i(TAG, "Send:"+url)
         val request = formatRequest(url, position)
         sendRequestAsync(request, object : RequestHandler {
             override fun onComplete(success: Boolean) {
@@ -165,7 +158,6 @@ class TrackingController(private val context: Context) : PositionListener, Netwo
                         delete(position)
                     }
                 } else {
-                    // StatusActivity.addMessage(context.getString(R.string.status_send_fail))
                     if (buffer) {
                         retry()
                     }
@@ -184,7 +176,8 @@ class TrackingController(private val context: Context) : PositionListener, Netwo
     }
 
     companion object {
-        private val TAG = TrackingController::class.java.simpleName
+private val TAG = "Traccar" + TrackingController::class.java.simpleName
+
         private const val RETRY_DELAY = 30 * 1000
     }
 

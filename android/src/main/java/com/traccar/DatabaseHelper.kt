@@ -23,6 +23,7 @@ import android.database.SQLException
 import android.database.sqlite.SQLiteDatabase
 import android.database.sqlite.SQLiteOpenHelper
 import android.os.AsyncTask
+import android.util.Log
 import java.sql.Date
 
 class DatabaseHelper(context: Context?) : SQLiteOpenHelper(context, DATABASE_NAME, null, DATABASE_VERSION) {
@@ -57,7 +58,7 @@ class DatabaseHelper(context: Context?) : SQLiteOpenHelper(context, DATABASE_NAM
         db.execSQL(
             "CREATE TABLE position (" +
                     "id INTEGER PRIMARY KEY AUTOINCREMENT," +
-                    "deviceId TEXT," +
+                    "deviceId TEXT NOT NULL," +
                     "time INTEGER," +
                     "latitude REAL," +
                     "longitude REAL," +
@@ -83,6 +84,7 @@ class DatabaseHelper(context: Context?) : SQLiteOpenHelper(context, DATABASE_NAM
 
     fun insertPosition(position: Position) {
         val values = ContentValues()
+        Log.i("TraccarDatabaseHelper", "insertPosition:"+ position.toString())
         values.put("deviceId", position.deviceId)
         values.put("time", position.time.time)
         values.put("latitude", position.latitude)
@@ -100,8 +102,9 @@ class DatabaseHelper(context: Context?) : SQLiteOpenHelper(context, DATABASE_NAM
     fun insertPositionAsync(position: Position, handler: DatabaseHandler<Unit?>) {
         object : DatabaseAsyncTask<Unit>(handler) {
             override fun executeMethod() {
-                insertPosition(position)
+              insertPosition(position)
             }
+
         }.execute()
     }
 
@@ -110,7 +113,7 @@ class DatabaseHelper(context: Context?) : SQLiteOpenHelper(context, DATABASE_NAM
         db.rawQuery("SELECT * FROM position ORDER BY id LIMIT 1", null).use { cursor ->
             if (cursor.count > 0) {
                 cursor.moveToFirst()
-                return Position(
+                val point =  Position(
                     id = cursor.getLong(cursor.getColumnIndex("id")),
                     deviceId = cursor.getString(cursor.getColumnIndex("deviceId")),
                     time = Date(cursor.getLong(cursor.getColumnIndex("time"))),
@@ -124,6 +127,8 @@ class DatabaseHelper(context: Context?) : SQLiteOpenHelper(context, DATABASE_NAM
                     charging = cursor.getInt(cursor.getColumnIndex("charging")) > 0,
                     mock = cursor.getInt(cursor.getColumnIndex("mock")) > 0,
                 )
+              Log.i("TraccarDatabaseHelper", "SelectPosition:deviceId:"+ point.toString())
+              return point
             }
         }
         return null
