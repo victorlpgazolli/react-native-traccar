@@ -8,7 +8,7 @@ const LINKING_ERROR =
 const Module = Platform.select({
   ios: NativeModules.TraccarModule,
   android: NativeModules.Traccar,
-})
+});
 const Traccar = Module
   ? Module
   : new Proxy(
@@ -20,9 +20,11 @@ const Traccar = Module
       }
     );
 
-
-function setupTrackingService(url: string, deviceId: string, interval: number): void {
-
+function setupTrackingService(
+  url: string,
+  deviceId: string,
+  interval: number
+): void {
   return Traccar.setupTrackingService(url, deviceId, interval);
 }
 function startTrackingService(): void {
@@ -36,5 +38,5 @@ function stopTrackingService(): void {
 export default {
   startTrackingService,
   stopTrackingService,
-  setupTrackingService
+  setupTrackingService,
 };
