@@ -1,6 +1,5 @@
 package com.traccar
 
-import com.facebook.react.bridge.ReactApplicationContext
 import android.app.AlarmManager
 import android.app.PendingIntent
 import android.content.Context
@@ -9,11 +8,10 @@ import android.content.SharedPreferences
 import android.os.Build
 import android.util.Log
 import androidx.core.content.ContextCompat
-import androidx.preference.PreferenceManager
+import com.facebook.react.bridge.ReactApplicationContext
 import com.traccar.Constants.Companion.KEY_DEVICE
 import com.traccar.Constants.Companion.KEY_INTERVAL
 import com.traccar.Constants.Companion.KEY_URL
-
 
 class TraccarClientBridge(context: ReactApplicationContext) {
 
@@ -29,6 +27,7 @@ class TraccarClientBridge(context: ReactApplicationContext) {
   }
 
     fun startTrackingService() {
+
         Log.i(TAG, "start!")
         try {
             val intent = Intent(reactContext, TrackingService::class.java)

@@ -12,6 +12,7 @@ buildscript {
     classpath 'com.google.gms:google-services:4.3.15'
     // noinspection DifferentKotlinGradleVersion
     classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+    classpath("com.facebook.react:react-native-gradle-plugin")
   }
 }
 
@@ -88,6 +89,7 @@ android {
 repositories {
   mavenCentral()
   google()
+  mavenLocal()
 }
 
 def kotlin_version = getExtOrDefault("kotlinVersion")
@@ -96,7 +98,8 @@ dependencies {
   // For < 0.71, this will be from the local maven repo
   // For > 0.71, this will be replaced by `com.facebook.react:react-android:$version` by react gradle plugin
   //noinspection GradleDynamicVersion
-  implementation "com.facebook.react:react-native:+"
+  implementation "com.facebook.react:react-android:+"
+  implementation "com.facebook.react:hermes-android:+"
   implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
   implementation 'com.google.android.material:material:1.6.1' // wait for preference-ktx update
   implementation 'androidx.multidex:multidex:2.0.1'
@@ -107,6 +110,7 @@ dependencies {
   implementation('dev.doubledot.doki:library:0.0.1@aar') {
   transitive = true
   }
+  implementation project(":rntraccar")
 }
 
 if (isNewArchitectureEnabled()) {
