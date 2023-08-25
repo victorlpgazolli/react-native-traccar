@@ -2,12 +2,20 @@ plugins {
     kotlin("multiplatform")
     kotlin("native.cocoapods")
     id("com.android.library")
+  id("maven-publish")
 }
 
-@OptIn(org.jetbrains.kotlin.gradle.ExperimentalKotlinGradlePluginApi::class)
 kotlin {
-    targetHierarchy.default()
-
+  publishing {
+    publications {
+      create<MavenPublication>("maven") {
+        from(components["kotlin"])
+        groupId = "dev.victorlpgazolli.rntraccar"
+        artifactId = "android"
+        version = "0.0.1"
+      }
+    }
+  }
     android {
         compilations.all {
             kotlinOptions {
@@ -15,9 +23,10 @@ kotlin {
             }
         }
     }
-    iosX64()
-    iosArm64()
-    iosSimulatorArm64()
+    ios()
+//    iosX64()
+//    iosArm64()
+//    iosSimulatorArm64()
 
     cocoapods {
         summary = "Some description for the Shared Module"
@@ -29,7 +38,7 @@ kotlin {
             baseName = "shared"
         }
     }
-    
+
     sourceSets {
         val commonMain by getting {
             dependencies {

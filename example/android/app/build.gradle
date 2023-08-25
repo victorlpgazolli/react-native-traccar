@@ -69,6 +69,11 @@ def enableProguardInReleaseBuilds = false
 def jscFlavor = 'org.webkit:android-jsc:+'
 
 android {
+  repositories {
+    google()
+    mavenCentral()
+    mavenLocal()
+  }
     ndkVersion rootProject.ext.ndkVersion
 
     compileSdkVersion rootProject.ext.compileSdkVersion
@@ -103,7 +108,11 @@ android {
     }
 }
 
+
 dependencies {
+
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+  implementation "dev.victorlpgazolli.rntraccar:android:0.0.1"
     // The version of react-native is set by the React Native Gradle Plugin
     implementation("com.facebook.react:react-android")
 
@@ -119,5 +128,5 @@ dependencies {
         implementation jscFlavor
     }
 }
-
+apply plugin: 'kotlin-android'
 apply from: file("../../node_modules/@react-native-community/cli-platform-android/native_modules.gradle"); applyNativeModulesAppBuildGradle(project)
