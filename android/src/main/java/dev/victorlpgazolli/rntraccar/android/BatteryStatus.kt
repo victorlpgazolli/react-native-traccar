@@ -13,7 +13,8 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.traccar
+package dev.victorlpgazolli.rntraccar.android
+
 
 data class BatteryStatus(
     val level: Double = 0.0,

@@ -15,13 +15,17 @@ kotlin {
         version = "0.0.1"
       }
     }
+    repositories {
+      mavenLocal()
+    }
   }
     android {
-        compilations.all {
-            kotlinOptions {
-                jvmTarget = "1.8"
-            }
-        }
+      publishLibraryVariants("release", "debug")
+      compilations.all {
+          kotlinOptions {
+              jvmTarget = "1.8"
+          }
+      }
     }
     ios()
 //    iosX64()
@@ -58,5 +62,6 @@ android {
     compileSdk = 33
     defaultConfig {
         minSdk = 24
+
     }
 }

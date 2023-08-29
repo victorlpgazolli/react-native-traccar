@@ -13,21 +13,25 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.traccar
+package dev.victorlpgazolli.rntraccar.android
+
 
 import android.content.Context
-import com.traccar.ProtocolFormatter.formatRequest
-import com.traccar.RequestManager.sendRequestAsync
-import com.traccar.PositionProvider.PositionListener
-import com.traccar.NetworkManager.NetworkHandler
+
+
+
+
+
 import android.os.Handler
 import android.os.Looper
 import androidx.preference.PreferenceManager
 import android.util.Log
-import com.traccar.DatabaseHelper.DatabaseHandler
-import com.traccar.RequestManager.RequestHandler
-import com.traccar.Constants
-class TrackingController(private val context: Context) : PositionListener, NetworkHandler {
+import dev.victorlpgazolli.rntraccar.android.ProtocolFormatter.formatRequest
+import dev.victorlpgazolli.rntraccar.android.RequestManager.sendRequestAsync
+
+
+class TrackingController(private val context: Context) : PositionProvider.PositionListener,
+  NetworkManager.NetworkHandler {
 
     private val handler = Handler(Looper.getMainLooper())
     private val preferences = context.getSharedPreferences("main", Context.MODE_PRIVATE)
@@ -100,7 +104,8 @@ class TrackingController(private val context: Context) : PositionListener, Netwo
 
     private fun write(position: Position) {
         log("write", position)
-        databaseHelper.insertPositionAsync(position, object : DatabaseHandler<Unit?> {
+        databaseHelper.insertPositionAsync(position, object :
+          DatabaseHelper.DatabaseHandler<Unit?> {
             override fun onComplete(success: Boolean, result: Unit?) {
                 if (success) {
                     if (isOnline && isWaiting) {
@@ -114,7 +119,7 @@ class TrackingController(private val context: Context) : PositionListener, Netwo
 
     private fun read() {
         log("read", null)
-        databaseHelper.selectPositionAsync(object : DatabaseHandler<Position?> {
+        databaseHelper.selectPositionAsync(object : DatabaseHelper.DatabaseHandler<Position?> {
             override fun onComplete(success: Boolean, result: Position?) {
                 if (success) {
                     if (result != null) {
@@ -136,7 +141,8 @@ class TrackingController(private val context: Context) : PositionListener, Netwo
 
     private fun delete(position: Position) {
         log("delete", position)
-        databaseHelper.deletePositionAsync(position.id, object : DatabaseHandler<Unit?> {
+        databaseHelper.deletePositionAsync(position.id, object :
+          DatabaseHelper.DatabaseHandler<Unit?> {
             override fun onComplete(success: Boolean, result: Unit?) {
                 if (success) {
                     read()
@@ -151,7 +157,7 @@ class TrackingController(private val context: Context) : PositionListener, Netwo
         log(TAG + "Send",position)
         Log.i(TAG, "Send:"+url)
         val request = formatRequest(url, position)
-        sendRequestAsync(request, object : RequestHandler {
+        sendRequestAsync(request, object : RequestManager.RequestHandler {
             override fun onComplete(success: Boolean) {
                 if (success) {
                     if (buffer) {

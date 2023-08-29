@@ -1,4 +1,5 @@
-package com.traccar
+package dev.victorlpgazolli.rntraccar.android
+
 
 class Constants {
 

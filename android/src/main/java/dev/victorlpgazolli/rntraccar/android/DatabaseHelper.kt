@@ -14,7 +14,8 @@
  * limitations under the License.
  */
 @file:Suppress("DEPRECATION", "StaticFieldLeak")
-package com.traccar
+package dev.victorlpgazolli.rntraccar.android
+
 
 import android.annotation.SuppressLint
 import android.content.ContentValues

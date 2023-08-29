@@ -14,7 +14,8 @@
  * limitations under the License.
  */
 @file:Suppress("DEPRECATION")
-package com.traccar
+package dev.victorlpgazolli.rntraccar.android
+
 
 import android.os.AsyncTask
 import android.util.Log

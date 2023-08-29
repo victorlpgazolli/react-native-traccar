@@ -13,7 +13,8 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.traccar
+package dev.victorlpgazolli.rntraccar.android
+
 
 import android.annotation.SuppressLint
 import android.content.Context
@@ -23,7 +24,8 @@ import android.location.LocationManager
 import android.os.Bundle
 import android.os.Looper
 import android.util.Log
-import com.traccar.Constants
+
+
 class AndroidPositionProvider(context: Context, listener: PositionListener) : PositionProvider(context, listener), LocationListener {
 
     private val locationManager = context.getSystemService(Context.LOCATION_SERVICE) as LocationManager

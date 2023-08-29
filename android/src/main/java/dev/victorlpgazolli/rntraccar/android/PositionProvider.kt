@@ -13,7 +13,8 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.traccar
+package dev.victorlpgazolli.rntraccar.android
+
 
 import android.content.Context
 import android.content.Intent
@@ -24,7 +25,8 @@ import android.os.BatteryManager
 import androidx.preference.PreferenceManager
 import android.util.Log
 import kotlin.math.abs
-import com.traccar.Constants
+
+
 
 abstract class PositionProvider(
     protected val context: Context,

@@ -8,6 +8,6 @@
         android:id="@+id/fragment"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:name="com.traccar.MainFragment" />
+        android:name="dev.victorlpgazolli.rntraccar.android.MainFragment" />
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

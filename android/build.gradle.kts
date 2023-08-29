@@ -1,17 +1,14 @@
 plugins {
-//    id("com.android.application")
     id("com.android.library")
     kotlin("android")
-  id("maven-publish")
+    id("maven-publish")
 }
 
 android {
     namespace = "dev.victorlpgazolli.rntraccar.android"
     compileSdk = 33
     defaultConfig {
-//        applicationId = "dev.victorlpgazolli.rntraccar.android"
         minSdk = 24
-        targetSdk = 33
     }
     buildFeatures {
         compose = true
@@ -19,11 +16,7 @@ android {
     composeOptions {
         kotlinCompilerExtensionVersion = "1.4.7"
     }
-//    packaging {
-//        resources {
-//            excludes += "/META-INF/{AL2.0,LGPL2.1}"
-//        }
-//    }
+
     buildTypes {
         getByName("release") {
             isMinifyEnabled = false

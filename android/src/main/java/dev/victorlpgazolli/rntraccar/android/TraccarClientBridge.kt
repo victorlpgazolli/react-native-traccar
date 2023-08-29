@@ -1,4 +1,5 @@
-package com.traccar
+package dev.victorlpgazolli.rntraccar.android
+
 
 import android.app.AlarmManager
 import android.app.PendingIntent
@@ -9,9 +10,10 @@ import android.os.Build
 import android.util.Log
 import androidx.core.content.ContextCompat
 import com.facebook.react.bridge.ReactApplicationContext
-import com.traccar.Constants.Companion.KEY_DEVICE
-import com.traccar.Constants.Companion.KEY_INTERVAL
-import com.traccar.Constants.Companion.KEY_URL
+import dev.victorlpgazolli.rntraccar.android.Constants.Companion.KEY_DEVICE
+import dev.victorlpgazolli.rntraccar.android.Constants.Companion.KEY_INTERVAL
+import dev.victorlpgazolli.rntraccar.android.Constants.Companion.KEY_URL
+
 
 class TraccarClientBridge(context: ReactApplicationContext) {
 

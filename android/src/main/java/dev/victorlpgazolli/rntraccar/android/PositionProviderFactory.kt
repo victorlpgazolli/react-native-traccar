@@ -13,14 +13,16 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.traccar
+package dev.victorlpgazolli.rntraccar.android
+
 
 import android.content.Context
-import com.traccar.PositionProvider.PositionListener
+
+
 
 object PositionProviderFactory {
 
-    fun create(context: Context, listener: PositionListener): PositionProvider {
+    fun create(context: Context, listener: PositionProvider.PositionListener): PositionProvider {
         return AndroidPositionProvider(context, listener)
     }
 }

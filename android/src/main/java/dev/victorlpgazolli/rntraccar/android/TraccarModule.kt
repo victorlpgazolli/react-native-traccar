@@ -1,4 +1,5 @@
-package com.traccar
+package dev.victorlpgazolli.rntraccar.android
+
 
 import com.facebook.react.bridge.ReactApplicationContext
 import com.facebook.react.bridge.ReactContextBaseJavaModule

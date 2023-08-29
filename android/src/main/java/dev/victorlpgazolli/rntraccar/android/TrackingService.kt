@@ -13,7 +13,8 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.traccar
+package dev.victorlpgazolli.rntraccar.android
+
 
 import android.Manifest
 import android.annotation.SuppressLint
@@ -33,7 +34,8 @@ import android.util.Log
 import androidx.core.app.NotificationCompat
 import androidx.core.content.ContextCompat
 import androidx.preference.PreferenceManager
-import com.traccar.Constants
+
+
 import android.app.NotificationChannel
 import android.app.NotificationManager
 class TrackingService : Service() {
@@ -129,8 +131,9 @@ class TrackingService : Service() {
 
     companion object {
 
-        const val ACTION_STARTED = "com.traccar.action.SERVICE_STARTED"
-        const val ACTION_STOPPED = "com.traccar.action.SERVICE_STOPPED"
+const val ACTION_STARTED = "dev.victorlpgazolli.rntraccar.android.action.SERVICE_STARTED"
+const val ACTION_STOPPED = "dev.victorlpgazolli.rntraccar.android.action.SERVICE_STOPPED"
+
         private val TAG = "Traccar"+TrackingService::class.java.simpleName
         private const val NOTIFICATION_ID = 1
 
