@@ -12,3 +12,10 @@ tasks.register("clean", Delete::class) {
 }
 group = "dev.victorlpgazolli.rntraccar"
 version = "0.0.1"
+
+buildscript {
+  dependencies {
+    classpath("com.squareup.sqldelight:gradle-plugin:1.5.3")
+    classpath("org.jetbrains.kotlin:kotlin-serialization:1.8.21")
+  }
+}

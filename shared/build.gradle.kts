@@ -3,6 +3,8 @@ plugins {
     kotlin("native.cocoapods")
     id("com.android.library")
   id("maven-publish")
+  id("com.squareup.sqldelight")
+  kotlin( "plugin.serialization")
 }
 
 kotlin {
@@ -46,13 +48,20 @@ kotlin {
     sourceSets {
         val commonMain by getting {
             dependencies {
-                //put your multiplatform dependencies here
+              implementation("com.squareup.sqldelight:runtime:1.5.3")
+              implementation("org.jetbrains.kotlinx:kotlinx-serialization-core:1.3.2")
+            }
+
+        }
+        val androidMain by getting {
+            dependencies {
+              implementation("com.squareup.sqldelight:android-driver:1.5.3")
             }
         }
-        val commonTest by getting {
-            dependencies {
-                implementation(kotlin("test"))
-            }
+        val iosMain by getting {
+          dependencies {
+            implementation("com.squareup.sqldelight:native-driver:1.5.3")
+          }
         }
     }
 }
@@ -64,4 +73,10 @@ android {
         minSdk = 24
 
     }
+}
+
+sqldelight {
+  database("CommonDatabase"){
+    packageName = "dev.victorlpgazolli.rntraccar.database"
+  }
 }

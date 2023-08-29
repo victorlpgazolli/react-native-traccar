@@ -1,0 +1,27 @@
+CREATE TABLE Position(
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    deviceId TEXT NOT NULL,
+    time INTEGER,
+    latitude REAL,
+    longitude REAL,
+    altitude REAL,
+    speed REAL,
+    course REAL,
+    accuracy REAL,
+    battery REAL,
+    charging INTEGER,
+    mock INTEGER
+);
+
+insertPosition:
+INSERT INTO Position (deviceId,time,latitude,longitude,altitude,speed,course,accuracy,battery,charging,mock)
+VALUES (?,?,?,?,?,?,?,?,?,?,?);
+
+
+selectPosition:
+SELECT * FROM Position ORDER BY id LIMIT 1;
+
+deletePosition:
+DELETE FROM Position WHERE id = ?;
+
+
