@@ -9,8 +9,8 @@ CREATE TABLE Position(
     course REAL,
     accuracy REAL,
     battery REAL,
-    charging INTEGER,
-    mock INTEGER
+    charging REAL,
+    mock REAL
 );
 
 insertPosition:

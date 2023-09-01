@@ -1,5 +1,16 @@
 package dev.victorlpgazolli.rntraccar.database
 
-import com.squareup.sqldelight.db.SqlDriver
+import app.cash.sqldelight.db.SqlDriver
 
-expect fun createSqlDriver(): SqlDriver
+
+expect class DriverFactory {
+  fun createDriver(): SqlDriver
+}
+
+fun createDatabase(driverFactory: DriverFactory): TraccarDatabase {
+  val driver = driverFactory.createDriver()
+  val database = TraccarDatabase(driver)
+
+  return database
+  // Do more work with the database (see below).
+}

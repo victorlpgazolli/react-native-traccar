@@ -2,10 +2,11 @@ plugins {
     kotlin("multiplatform")
     kotlin("native.cocoapods")
     id("com.android.library")
-  id("maven-publish")
-  id("com.squareup.sqldelight")
-  kotlin( "plugin.serialization")
+    id("maven-publish")
+  id("app.cash.sqldelight") version "2.0.0"
+    kotlin( "plugin.serialization")
 }
+
 
 kotlin {
   publishing {
@@ -18,17 +19,16 @@ kotlin {
       }
     }
     repositories {
+      mavenCentral()
+      google()
       mavenLocal()
     }
   }
     android {
       publishLibraryVariants("release", "debug")
-      compilations.all {
-          kotlinOptions {
-              jvmTarget = "1.8"
-          }
-      }
+
     }
+
     ios()
 //    iosX64()
 //    iosArm64()
@@ -48,19 +48,19 @@ kotlin {
     sourceSets {
         val commonMain by getting {
             dependencies {
-              implementation("com.squareup.sqldelight:runtime:1.5.3")
+              implementation("app.cash.sqldelight:runtime:2.0.0")
               implementation("org.jetbrains.kotlinx:kotlinx-serialization-core:1.3.2")
             }
 
         }
         val androidMain by getting {
             dependencies {
-              implementation("com.squareup.sqldelight:android-driver:1.5.3")
+              implementation("app.cash.sqldelight:android-driver:2.0.0")
             }
         }
         val iosMain by getting {
           dependencies {
-            implementation("com.squareup.sqldelight:native-driver:1.5.3")
+            implementation("app.cash.sqldelight:native-driver:2.0.0")
           }
         }
     }
@@ -73,10 +73,16 @@ android {
         minSdk = 24
 
     }
+    compileOptions {
+      sourceCompatibility = JavaVersion.VERSION_17
+      targetCompatibility = JavaVersion.VERSION_17
+    }
 }
 
 sqldelight {
-  database("CommonDatabase"){
-    packageName = "dev.victorlpgazolli.rntraccar.database"
+  databases {
+    create("TraccarDatabase") {
+      packageName.set("dev.victorlpgazolli.rntraccar.database")
+    }
   }
 }

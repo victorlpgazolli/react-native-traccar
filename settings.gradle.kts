@@ -5,6 +5,9 @@ pluginManagement {
         mavenCentral()
         mavenLocal()
     }
+  plugins {
+    id("com.squareup.sqldelight") version "1.5.3"
+  }
 }
 
 dependencyResolutionManagement {

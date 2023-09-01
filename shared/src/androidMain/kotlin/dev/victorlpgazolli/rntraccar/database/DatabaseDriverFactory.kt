@@ -1,9 +1,11 @@
 package dev.victorlpgazolli.rntraccar.database
 
-import com.squareup.sqldelight.android.AndroidSqliteDriver
-import com.squareup.sqldelight.db.SqlDriver
-import dev.victorlpgazolli.rntraccar.utils.AndroidMainApp
+import android.content.Context
+import app.cash.sqldelight.db.SqlDriver
+import app.cash.sqldelight.driver.android.AndroidSqliteDriver
 
-actual fun createSqlDriver(): SqlDriver {
-  return AndroidSqliteDriver(CommonDatabase.Schema, AndroidMainApp.applicationContext, "common.db")
+actual class DriverFactory(private val appContext: Context) {
+  actual fun createDriver(): SqlDriver {
+    return AndroidSqliteDriver(TraccarDatabase.Schema, appContext, "kmp.db")
+  }
 }
